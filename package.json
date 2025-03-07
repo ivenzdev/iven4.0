@@ -1,0 +1,36 @@
+{
+  "name": "iven4.0",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "emailjs-com": "^3.2.0",
+    "lodash": "^4.17.21",
+    "next": "15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-scroll": "^1.8.7",
+    "react-spring": "^9.7.5",
+    "react-waypoint": "^10.3.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/aos": "^3.0.7",
+    "@types/lodash": "^4.17.15",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-scroll": "^1.8.10",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.0",
+    "sass": "^1.85.1",
+    "typescript": "^5"
+  }
+}

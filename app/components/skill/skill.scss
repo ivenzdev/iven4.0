@@ -1,0 +1,132 @@
+/*
+
+Skill Page
+
+*/
+
+.skill.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-bar {
+    width: 500px;
+    height: 20px;
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+}
+
+.skill-bar-name {
+    width: 130px;
+    text-align: right;
+    font-family: adobe-garamond-pro, serif;
+    font-size: 15px;
+    margin-right: 20px;
+}
+.skill-bar-body span {
+    position: absolute;
+    right: 0;
+    top: -6.5px;
+}
+
+.skill-bar-body {
+    width: 500px;
+    height: 8px;
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 5px;
+}
+
+.skill-bar-body div {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: #5d4257;
+    background-image: linear-gradient(315deg, #5d4257 0%, #a5c7b7 74%);
+}
+
+.skill-bar-body span {
+    position: absolute;
+    right: 0;
+    top: -6.5px;
+}
+.skill-page-content__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.skill-page-content__head h2 {
+    font-size: 3rem;
+    font-family: "Cinzel", serif;
+    letter-spacing: 2px;
+    color: var(--theme-primary);
+    position: relative;
+    font-weight: 500;
+}
+
+.skill-page-content__head h2 span {
+    color: var(--theme-primary);
+    position: relative;
+    display: inline-flex;
+
+    transition: all 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.skill-page-content__head h2 span.active {
+    transform: translateY(-10px);
+    color: var(--theme-green);
+}
+
+.skill-page-content__head p {
+    color: var(--theme-primary);
+    font-size: 1.4rem;
+    font-family: proxima-nova, sans-serif;
+    margin: 10px 0px 40px;
+}
+@media screen and (min-width: 1500px) {
+    .skill-bar {
+        width: 550px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .skill-page-content__head p {
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+    }
+    .skill-page-content__head h2 {
+        font-size: 2.6rem;
+    }
+    .skill-bar {
+        padding: 20px 0;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .skill-page-content {
+        width: 95%;
+    }
+    .skill-bar-body {
+        height: 6px;
+    }
+    .skill-page-content__head h2 {
+        font-size: 2.2rem;
+    }
+    .skill-page-content__head h2::after {
+        width: 50px;
+    }
+
+    .skill-bar {
+        width: 100%;
+        padding: 16px 0;
+    }
+    .skill-bar-name {
+        font-size: 1.1rem;
+        margin-right: 12px;
+        width: 100px;
+    }
+}

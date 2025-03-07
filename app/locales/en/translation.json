@@ -1,0 +1,103 @@
+{
+  "welcome": "Welcome",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "name": {
+    "first": "Iven",
+    "last": "Zhang"
+  },
+  "greeting": "Hey, I'm Iven",
+  "description": "I'm software developer specializing in React.js and Next.js, with extensive experience in startup environments. I excel at building 0-to-1 applications, transforming ideas into visually appealing, user centric, &  high-performance products.",
+  "requestResume": "Request Resume",
+  "viewWork": "See my work",
+  "about": {
+    "education": {
+      "title": "EDUCATION",
+      "university": "Lehigh University",
+      "graduationYear": "Graduated in 2023",
+      "major": "Major: Computer Science"
+    },
+    "expertise": {
+      "title": "COMPETENCIES",
+      "items": [
+        "Fullstack Development",
+        "Software Engineering",
+        "UI & UX Optimization",
+        "Graphic Design",
+        "On & Off Page SEO",
+        "Branding",
+        "Marketing"
+      ]
+    },
+    "development": {
+      "title": "Development Variation",
+      "items": [
+        "Portfolio Showcasing",
+        "Data Visualization & Analysis",
+        "Social Media Platform",
+        "Data Management Systems",
+        "E-commerce Solutions"
+      ]
+    },
+    "stats": {
+      "experience": {
+        "title": "development experience",
+        "value": "4 years"
+      },
+      "satisfaction": {
+        "title": "Project Completed",
+        "value": "20+"
+      },
+      "websites": {
+        "title": "Tech Stack",
+        "value": "15+"
+      },
+      "user": {
+        "title": "Website Visitors",
+        "value": "0.7 million+"
+      },
+      "connections": {
+        "title": "App Performance Rate",
+        "value": "95%+"
+      },
+      "contact": {
+        "title": "GET IN TOUCH"
+      }
+    }
+  },
+  "contact": {
+    "collaboration": "collaboration",
+    "buildTogether": "Let's build something, incredible, together",
+    "sendInquiry": "Send Inquiry",
+    "preferEmail": "Prefer Email?",
+    "successMessage": "Successfully sent, check your email for confirmation",
+    "errorMessage": "Internal server error, please use the email below",
+    "subjects": {
+      "en": ["App Dev", "Frontend Dev", "Portfolios Design", "Website Prototypes", "Request Resume","Just Bored", "Others"]
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "selectApplied": "Select all that applied",
+      "howCanIHelp": "How can I help?"
+    },
+    "validation": {
+      "nameRequired": "Name must be between 3 and 40 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "contentLength": "Message must be between 20 and 500 characters",
+      "subjectRequired": "Select above at least one field"
+    },
+    "icons": {
+      "warning": "Warning icon",
+      "success": "Success icon",
+      "rocket": "Rocket icon",
+      "takeoff": "Take off icon"
+    },
+    "copyright": "All Rights Reserved. Designed and Developed by Iven Zhang."
+  }
+} 

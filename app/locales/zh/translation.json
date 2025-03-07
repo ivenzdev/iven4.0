@@ -1,0 +1,74 @@
+{
+  "welcome": "欢迎",
+  "navbar": {
+    "home": "首页",
+    "about": "关于",
+    "skills": "才能",
+    "portfolio": "项目",
+    "contact": "联系"
+  },
+  "name": {
+    "first": "张",
+    "middle": "",
+    "last": "浩贤"
+  },
+  "greeting": "用八个字介绍自己",
+  "description": "我是一名专门从事 React.js 和 Next.js 开发的应用程序开发人员，在初创环境方面拥有丰富的经验，并擅长构建 0-1 应用程序.",
+  "requestResume": "請求履歷",
+  "about": {
+    "education": {
+      "title": "學 位 教 育",
+      "university": "理 海 大 學",
+      "graduationYear": "畢 業 于 2023",
+      "major": "專 業: 計 算 機 工 程"
+    },
+    "expertise": {
+      "title": "我 的 專 長",
+      "items": [
+        "網 頁 設 計",
+        "全 端 開 發",
+        "軟 件 工 程",
+        "平 面 設 計"
+      ]
+    },
+    "development": {
+      "title": "開 發 範 疇",
+      "items": [
+        "作 品 集 展 示",
+        "資 料 視 覺 化 與 分 析",
+        "社 交 媒 體 平 台",
+        "資 料 管 理 系 統",
+        "電 子 商 務 解 決 方 案"
+      ]
+    },
+    "stats": {
+      "experience": {
+        "title": "多 年 網 頁 經 驗",
+        "value": "4+"
+      },
+      "websites": {
+        "title": "網 頁 建 造",
+        "value": "50+"
+      },
+      "connections": {
+        "title": "人 脈 關 係",
+        "value": "100+"
+      },
+      "satisfaction": {
+        "title": "客 戶 滿 意 度",
+        "value": "95%+"
+      },
+      "contact": {
+        "title": "聯 系 方 式"
+      }
+    }
+  },
+  "contact": {
+    "collaboration": "合 作 發 展，共 創 未 來",
+    "buildTogether": "開 創 新 起 點，風 雨 共 兼 程。",
+    "sendInquiry": "發送詢問",
+    "preferEmail": "郵箱更方便？",
+    "successMessage": "發送成功，查看郵箱確認",
+    "errorMessage": "內部服務器錯誤，請使用下面的電子郵件"
+  }
+} 
