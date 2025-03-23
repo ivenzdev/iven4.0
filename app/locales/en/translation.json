@@ -11,19 +11,19 @@
     "first": "Iven",
     "last": "Zhang"
   },
-  "greeting": "Hey, I'm Iven",
+  "greeting": "Hey, I'm Rent",
   "description": "I'm software developer specializing in React.js and Next.js, with extensive experience in startup environments. I excel at building 0-to-1 applications, transforming ideas into visually appealing, user centric, &  high-performance products.",
   "requestResume": "Request Resume",
   "viewWork": "See my work",
   "about": {
     "education": {
-      "title": "EDUCATION",
+      "title": "Education",
       "university": "Lehigh University",
       "graduationYear": "Graduated in 2023",
       "major": "Major: Computer Science"
     },
     "expertise": {
-      "title": "COMPETENCIES",
+      "title": "Competency",
       "items": [
         "Fullstack Development",
         "Software Engineering",
@@ -46,7 +46,7 @@
     },
     "stats": {
       "experience": {
-        "title": "development experience",
+        "title": "Development Experience",
         "value": "4 years"
       },
       "satisfaction": {
@@ -66,12 +66,12 @@
         "value": "95%+"
       },
       "contact": {
-        "title": "GET IN TOUCH"
+        "title": "Get In Touch"
       }
     }
   },
   "contact": {
-    "collaboration": "collaboration",
+    "collaboration": "Collaboration",
     "buildTogether": "Let's build something, incredible, together",
     "sendInquiry": "Send Inquiry",
     "preferEmail": "Prefer Email?",

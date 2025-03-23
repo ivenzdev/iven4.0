@@ -18,9 +18,10 @@ interface LinkItem {
 interface SideNavProps {
   linkItems: LinkItem[];
   setCurrentSectionIndex: (index: number) => void;
+  width: number;
 }
 
-function SideNav({ linkItems, setCurrentSectionIndex }: SideNavProps) {
+const SideNav: React.FC<SideNavProps> = ({ linkItems, setCurrentSectionIndex, width }) => {
   const [tempClick, setTempClick] = useState(false);
   useEffect(() => {
     Events.scrollEvent.register('begin', () => {});
@@ -49,9 +50,8 @@ function SideNav({ linkItems, setCurrentSectionIndex }: SideNavProps) {
       }, 100)
     );
   }, [tempClick]);
-
   return (
-    <div className='sideNav'>
+    <div className='sideNav' style={{ width: `${width}px` }}>
       <div>
         {linkItems &&
           linkItems.map(({ name, to }, key) => (
@@ -68,8 +68,7 @@ function SideNav({ linkItems, setCurrentSectionIndex }: SideNavProps) {
                 setCurrentSectionIndex(key);
                 setTempClick(true);
               }}
-              style={tempClick ? { cursor: 'default' } : { cursor: 'pointer' }}
-            >
+              style={tempClick ? { cursor: 'default' } : { cursor: 'pointer' }}>
               <span>{name}</span>
             </Link>
           ))}
@@ -92,6 +91,6 @@ function SideNav({ linkItems, setCurrentSectionIndex }: SideNavProps) {
       </div>
     </div>
   );
-}
+};
 
 export default SideNav;

@@ -88,7 +88,7 @@
 }
 
 .sideNav {
-    width: 650px;
+    /* width is now set dynamically in the component */
     min-height: 700px;
     height: 100vh;
     display: flex;
@@ -107,9 +107,9 @@
         left: calc(100% - 300px);
     }
 }
-@media screen and (min-width: 1700px) {
+@media screen and (max-width: 940px) {
     .sideNav {
-        width: 850px;
+        display: none;
     }
 }
 
@@ -167,20 +167,20 @@
     opacity: 0.6;
     transform: translateX(0px);
 }
-@media screen and (max-width: 1200px) {
-    .sideNav {
-        width: 380px;
-    }
-}
+// @media screen and (max-width: 1200px) {
+//     .sideNav {
+//         width: 380px;
+//     }
+// }
 
-@media screen and (max-width: 760px) {
-    .page-line-container div {
-        display: none;
-    }
-    .sideNav div {
-        display: none;
-    }
-}
+// @media screen and (max-width: 760px) {
+//     .page-line-container div {
+//         display: none;
+//     }
+//     .sideNav div {
+//         display: none;
+//     }
+// }
 
 .rocket-container {
     pointer-events: none;

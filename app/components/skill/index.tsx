@@ -35,20 +35,22 @@ function Skills({ lang = false }: SkillProps) {
     <div className='skill page' id='skills'>
       <Waypoint onEnter={() => setToggle(true)} bottomOffset='40%' />
 
-      <div className='skill-page-content'>
-        <div className='skill-page-content__head'>
-          <h2>
-            {title.map((l, key) => (
-              <span key={key}>{l}</span>
-            ))}
-          </h2>
-          <p>- {lang ? '軟 件 知 識' : 'Knowledge in Software'} -</p>
-        </div>
+      <div className='page-content'>
+        <div className='skill-page-content'>
+          <div className='skill-page-content__head'>
+            <h2>
+              {title.map((l, key) => (
+                <span key={key}>{l}</span>
+              ))}
+            </h2>
+            <p>- {lang ? '軟 件 知 識' : 'Knowledge in Software'} -</p>
+          </div>
 
-        <div className='skill-page-content__body'>
-          {skills.map((item, key) => (
-            <FilledBar appear={toggle} item={item} key={key} id={key} />
-          ))}
+          <div className='skill-page-content__body'>
+            {skills.map((item, key) => (
+              <FilledBar appear={toggle} item={item} key={key} id={key} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -36,7 +36,7 @@ export type Project = {
 export const projects: Project[] = [
 
   {
-    label: 'RentVest',
+    label: 'Rent Vest',
     about: 'Real Estate Platform for Rent to Own',
     year: ['2025', 'Startup'],
     description: {
@@ -93,14 +93,14 @@ export const projects: Project[] = [
 
 
   {
-    label: 'Yan',
-    about: 'Personal Endeavour and Innovations',
-    year: ['2022', 'Private Asset', 'Sold'],
+    label: 'Stealth',
+    about: 'Aggregation for centralizing special content',
+    year: ['Sole Proprietorship', 'Sold'],
     description: {
       eng: "I've designed and built this art-inspired, full-stack application as a comprehensive display of my skills. With thoughtful UI/UX design, dedicated front and back-end programming, careful database operations, and practical business solutions, this project captures my journey in software development. It's a blend of software architecture planning and rigorous testing that I'm genuinely proud to present.",
       chn: '我构建了这款充满艺术气息的全栈应用，以全面展示我的技能。这个项目捕捉了我在软件开发中的旅程，采用了周到的UI/UX设计、专注的前后端编程、谨慎的数据库操作和实用的商业解决方案。这是我深感自豪的软件架构规划与严格测试的结晶。',
     },
-    url: 'https://about.yannn.org/',
+    // url: 'https://about.yannn.org/',
     img: yan,
     tech: [
       { label: 'React', svg: react },
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     label: 'IZ | Engineer',
     about: "Iven Zhang's Portfolio Website",
-    year: ['2022'],
+    year: ['2022', "Self's Portfolio"],
     description: {
       eng: 'Featuring a single-page layout showcasing my skills, projects, and contact information. Available in both English and Chinese, this site invites you to explore my work and connect with me for collaboration opportunities.',
       chn: '展示了一種單頁佈局，展示了我的技能、項目和聯繫信息。該網站提供英文和中文兩種語言，邀請您探索我的作品並與我聯繫以尋求合作機會。',
@@ -145,7 +145,7 @@ export const projects: Project[] = [
   {
     label: 'eCapital',
     about: 'Investment Startup Company',
-    year: ['2022'],
+    year: ['Startup', '2022'],
     description: {
       eng: "Undertaken a freelance project, served as a Project Manager, React.js Developer, and Website Designer for ECAPITAL Startup in Manhattan, NY. Built visually stunning and highly responsive mobile/desktop website portfolios while managing the project's layout, milestones, and timeline to ensure optimal execution.",
       chn: '接手了一個自由項目，為紐約曼哈頓的ECAPITAL新創公司擔任項目經理、React.js開發人員和網站設計師。在管理項目的佈局、里程碑和時間表以確保最優執行的同時，創建了視覺效果出眾且反應極快的移動/桌面網站投資組合。',
@@ -163,7 +163,7 @@ export const projects: Project[] = [
   {
     label: 'CAG',
     about: 'Cloud Accounting Group',
-    year: ['2022'],
+    year: ['2022', 'Side Project'],
     description: {
       eng: 'As a website designer and developer, my fun project involves creating a brand that aligns with a given prompt. This includes developing user demographics and personas, creating a brand mood board, designing a style tile, mapping out the site structure, prototyping, and ultimately implementing the website.',
       chn: '作為一名網站設計師和開發者，我的有趣項目包括創建一個與給定提示相符的品牌。這包括開發用戶人口統計學和角色設定，創建品牌情緒板，設計風格瓷磚，劃定網站結構，製作原型，最終實現網站。',

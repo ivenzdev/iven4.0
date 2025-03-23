@@ -57,7 +57,7 @@
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    font-family: "Cinzel", serif;
+    // font-family: "Cinzel", serif;
 }
 
 .contact-page-content h3 img {
@@ -653,4 +653,19 @@ textarea {
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+@media screen and (max-width: 940px) {
+    .contact-page-content {
+        width: 100%;
+    }
+    h4.copyright {
+        margin-top: 50px;
+        position: relative;
+    }
+}
+
+.page-content.--contact {
+    padding: 0;
+    width: 100%;
 }

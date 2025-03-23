@@ -106,6 +106,24 @@ Skill Page
     }
 }
 
+@media screen and (max-width: 940px) {
+    .skill-bar {
+        width: 100%;
+    }
+
+    .skill-page-content {
+        width: 100%;
+    }
+
+    .skill-bar-body {
+        width: 100%;
+    }
+    .skill-bar-name {
+        text-align: left;
+        width: 70px;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .skill-page-content {
         width: 95%;
@@ -130,3 +148,9 @@ Skill Page
         width: 100px;
     }
 }
+
+// @media screen and (max-width: 740px) {
+//     .skill-page-content {
+//         width: 100%;
+//     }
+// }

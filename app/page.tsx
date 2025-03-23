@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useMemo, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect } from 'react';
@@ -13,6 +14,7 @@ import Skill from '@/app/components/skill/index';
 import { scroller } from 'react-scroll';
 import Portfolio from '@/app/components/portfolio/index';
 import Contact from '@/app/components/contact/index';
+import _ from 'lodash';
 
 export default function Page() {
   useEffect(() => {
@@ -48,89 +50,113 @@ export default function Page() {
   );
 
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const isScrolling = useRef(false);
-  const lastScrollTime = useRef(Date.now());
-  const lastScrollDirection = useRef(0);
 
-  // Add effect to initialize scroll on mount
+  // useEffect(() => {
+  //   // Common function for both scroll and resize events
+  //   const handleViewportChange = () => {
+  //     if (window.innerHeight > 700 && window.innerWidth > 760) {
+  //       const height = window.innerHeight < 700 ? 700 : window.innerHeight;
+  //       const index = Math.round(window.pageYOffset / height);
+  //       const link = linkItems.find((item) => item.id === index);
+
+  //       if (link) {
+  //         scroller.scrollTo(link.to, {
+  //           duration: 600,
+  //           smooth: 'easeOutQuart',
+  //           offset: 0,
+  //         });
+  //       }
+  //     }
+  //   };
+
+  //   // Debounced scroll handler
+  //   const handleScroll = _.debounce(() => {
+  //     handleViewportChange();
+  //   }, 500);
+
+  //   // Resize handler
+  //   const handleResize = () => {
+  //     handleViewportChange();
+  //   };
+
+  //   // Add event listeners
+  //   window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('resize', handleResize);
+
+  //   // Clean up
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, [linkItems]);
+
+  // Add state for sidenav width
+  const [sidenavWidth, setSidenavWidth] = useState(650);
+
+  // Calculate sidenav width based on window size
   useEffect(() => {
-    // Small delay to ensure all components are rendered
-    const timer = setTimeout(() => {
-      scroller.scrollTo(linkItems[0].to, {
-        duration: 0,
-        smooth: 'easeOutQuart',
-        offset: 0,
-      });
-    }, 100);
+    const calculateSidenavWidth = () => {
+      if (typeof window === 'undefined') return;
 
-    return () => clearTimeout(timer);
-  }, [linkItems]); // Empty dependency array ensures this runs once on mount
+      const windowWidth = window.innerWidth;
 
-  // Fix: Properly implement useCallback
-  const handleScrollSnap = useCallback(
-    (direction: number) => {
-      // Cancel any ongoing scroll animation when user initiates a new scroll
-      if (isScrolling.current) {
-        // Force stop any ongoing scroll animations
-        // We'll implement this by immediately allowing a new scroll
-        isScrolling.current = false;
-      }
+      // Minimum app-content width is 700px
+      const minAppContentWidth = 700;
 
-      const nextIndex = Math.max(0, Math.min(linkItems.length - 1, currentSectionIndex + direction));
-      if (nextIndex !== currentSectionIndex) {
-        isScrolling.current = true;
-        setCurrentSectionIndex(nextIndex);
+      // Calculate available width for sidenav
+      let newSidenavWidth = windowWidth - minAppContentWidth;
 
-        const targetId = linkItems[nextIndex].to;
-        scroller.scrollTo(targetId, {
-          duration: 1200,
-          smooth: 'easeOutQuart',
-          offset: 0,
-        });
+      // Ensure sidenav has a minimum width of 300px and maximum of 650px
+      newSidenavWidth = Math.max(300, Math.min(650, newSidenavWidth));
 
-        // Longer timeout to ensure animation completes before allowing new scrolls
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 1200); // Match the duration of the scroll animation
-      }
-    },
-    [currentSectionIndex, linkItems]
-  );
-
-  // Detect wheel events for scroll direction - immediate response
-  useEffect(() => {
-    const wheelHandler = (e: WheelEvent) => {
-      e.preventDefault();
-
-      // We'll allow scrolling even if already scrolling
-      // This makes the UI more responsive to user input
-
-      const now = Date.now();
-      const timeDelta = now - lastScrollTime.current;
-      lastScrollTime.current = now;
-
-      // Determine scroll direction (1 for down, -1 for up)
-      const direction = e.deltaY > 0 ? 1 : -1;
-
-      // Only process if not too frequent (to prevent rapid multiple scrolls)
-      if (timeDelta > 100) {
-        lastScrollDirection.current = direction;
-        handleScrollSnap(direction);
-      }
+      setSidenavWidth(newSidenavWidth);
     };
 
-    window.addEventListener('wheel', wheelHandler, { passive: false });
+    // Calculate on mount
+    calculateSidenavWidth();
+
+    // Recalculate on window resize
+    window.addEventListener('resize', calculateSidenavWidth);
 
     return () => {
-      window.removeEventListener('wheel', wheelHandler);
+      window.removeEventListener('resize', calculateSidenavWidth);
     };
-  }, [currentSectionIndex, handleScrollSnap, linkItems]);
+  }, []);
+
+  // Add state for window width - initialize without using window
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  // Update after component mounts to avoid hydration mismatch
+  useEffect(() => {
+    setIsBrowser(true);
+    setWindowWidth(window.innerWidth);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className='app'>
-      <SideNav linkItems={linkItems} setCurrentSectionIndex={setCurrentSectionIndex} />
+      <SideNav linkItems={linkItems} setCurrentSectionIndex={setCurrentSectionIndex} width={sidenavWidth} />
       <Navbar linkItems={linkItems} />
-      <div className='app-content'>
+      <div
+        className='app-content'
+        style={
+          isBrowser
+            ? {
+                transform: windowWidth > 940 ? `translateX(${sidenavWidth}px)` : 'none',
+                maxWidth: windowWidth > 940 ? `calc(100vw - ${sidenavWidth}px)` : '100%',
+              }
+            : {}
+        }>
         <Home setCurrentSectionIndex={setCurrentSectionIndex} />
         <About />
         <Skill />

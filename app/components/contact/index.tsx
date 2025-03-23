@@ -15,34 +15,37 @@ const Contact: React.FC = () => {
 
   return (
     <div className='contact page' id='contact'>
-      <div className='contact-page-content-container'>
-        <div className='contact-page-content'>
-          <h3>
-            {t('contact.collaboration')}
-            <Image src={takeoff} alt={t('contact.icons.takeoff') as string} width={24} height={24} />
-          </h3>
-          <p>{t('contact.buildTogether')}</p>
-          <ContactForm isNonEnglish={isNonEnglish} />
-          {
-            <div className='contact-page-content-icons'>
-              <a href='https://www.linkedin.com/in/iven-zhang-511b86205/' target='_blank' rel='noreferrer' key='0'>
-                <Image src={linkin} alt='linkedin icon' />
-              </a>
-              <a href='mailto:ivenzhangg@gmail.com' target='_blank' rel='noreferrer' key='2'>
-                <Image src={mail} alt='mail icon' />
-              </a>
-              <a href='https://www.instagram.com/_yesloiven/?hl=en' target='_blank' rel='noreferrer' key='3'>
-                <Image src={inst} alt='instagram icon' />
-              </a>
-            </div>
-          }
-          ,
-        </div>
-      </div>
       <Person />
-      <h4 className='copyright'>
-        © {new Date().getFullYear()} IZ | ENGINEER. {t('contact.copyright')}
-      </h4>
+      <div className='page-content --contact'>
+        <div className='contact-page-content-container'>
+          <div className='contact-page-content'>
+            <h3>
+              {t('contact.collaboration')}
+              <Image src={takeoff} alt={t('contact.icons.takeoff') as string} width={24} height={24} />
+            </h3>
+            <p>{t('contact.buildTogether')}</p>
+            <ContactForm isNonEnglish={isNonEnglish} />
+            {
+              <div className='contact-page-content-icons'>
+                <a href='https://www.linkedin.com/in/iven-zhang-511b86205/' target='_blank' rel='noreferrer' key='0'>
+                  <Image src={linkin} alt='linkedin icon' />
+                </a>
+                <a href='mailto:ivenzhangg@gmail.com' target='_blank' rel='noreferrer' key='2'>
+                  <Image src={mail} alt='mail icon' />
+                </a>
+                <a href='https://www.instagram.com/_yesloiven/?hl=en' target='_blank' rel='noreferrer' key='3'>
+                  <Image src={inst} alt='instagram icon' />
+                </a>
+              </div>
+            }
+            ,
+          </div>
+        </div>
+
+        <h4 className='copyright'>
+          © {new Date().getFullYear()} IZ | ENGINEER. {t('contact.copyright')}
+        </h4>
+      </div>
     </div>
   );
 };

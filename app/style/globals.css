@@ -8,18 +8,16 @@
 
 /* 1.2 typography config */
 
-
 p {
   line-height: 1.5;
 }
-
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-    font-size: 62.5%;
-  
+  font-size: 62.5%;
+  min-height: 100%;
 }
 
 body {
@@ -41,9 +39,6 @@ a {
   text-decoration: none;
 }
 
-
-
-
 .app {
   width: 100%;
   position: relative;
@@ -55,10 +50,20 @@ a {
   min-width: 700px;
   z-index: 10;
   position: relative;
-  margin-left: 650px;
+  /* transform and max-width are now set dynamically in the component */
   background-color: white;
 }
-@media screen and (min-width: 1700px) {
+
+@media screen and (max-width: 940px) {
+  .app-content {
+    min-width: unset;
+    width: 100%;
+    transform: none !important;
+    max-width: 100% !important;
+  }
+}
+
+/* @media screen and (min-width: 1700px) {
   .app-content {
     margin-left: 850px;
   }
@@ -74,39 +79,59 @@ a {
     position: absolute;
     margin-top: 80px;
   }
-}
+}*/
 
 .page {
   position: relative;
   min-height: 700px;
   height: 100vh;
   font-family: proxima-nova, sans-serif;
-  /* font-family: adobe-garamond-pro, serif; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 50px; */
+  background-color: white;
 }
 
-@media screen and (max-width: 760px) {
+.page-content {
+  width: 100%;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+@media screen and (max-width: 940px) {
   .page {
-    min-height: unset;
     height: fit-content;
-    padding-top: 120px;
-    position: relative;
-  }
-  .page:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    bottom: -60px;
-    background-color: var(--theme-primary);
-    opacity: 0.05;
-    width: 90%;
-    height: 1px;
-    left: 50%;
-    transform: translateX(-50%);
+    min-height: auto;
+    margin: 100px 0;
   }
 }
-
 
 button {
   cursor: pointer;
   border: none;
   outline: 0;
+}
+
+@media screen and (max-width: 760px) {
+  .page:not(:last-child)::after {
+    background-color: var(--theme-primary);
+    bottom: -60px;
+    content: '';
+    height: 1px;
+    left: 50%;
+    opacity: 0.05;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .page {
+    padding: 0 50px;
+  }
 }

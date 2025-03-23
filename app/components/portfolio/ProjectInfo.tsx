@@ -3,7 +3,7 @@ import figma from '@/public/figma.svg';
 import code from '@/public/code.svg';
 import github from '@/public/github.svg';
 import bit from '@/public/bit.svg';
-import Grid from './Grid';
+import close from '@/public/close.svg';
 import Image from 'next/image';
 import { Project } from './Projects';
 
@@ -24,12 +24,12 @@ function ProjectInfo({ project, setInfoKey }: ProjectInfoProps) {
   return (
     <div className={`project-info ${project ? 'active' : ''}`}>
       <div
-        className='gridMenu'
+        className='close-button'
         onClick={() => {
           setInfoKey(-1);
-        }}
-      >
-        <Grid />
+        }}>
+        {/* <Grid /> */}
+        <Image src={close} alt='close' width={15} height={15} />
       </div>
 
       <div>
@@ -48,6 +48,7 @@ function ProjectInfo({ project, setInfoKey }: ProjectInfoProps) {
 
         <div className='section'>
           <h5>Description</h5>
+
           <p>{project && (lang ? project.description.chn : project.description.eng)}</p>
         </div>
 
@@ -66,67 +67,69 @@ function ProjectInfo({ project, setInfoKey }: ProjectInfoProps) {
           </div>
         </div>
 
-        <div className='section'>
-          <h5>Links</h5>
+        {(project.url || project.figma) && (
+          <div className='section'>
+            <h5>Links</h5>
 
-          <div className='link-container'>
-            {project?.github && (
-              <a href={project.github} target='_blank' rel='noreferrer'>
-                <Image src={github} alt='github' width={20} height={20} />
-                Github
-              </a>
-            )}
-            {project?.bit && (
-              <a href={project.bit} target='_blank' rel='noreferrer'>
-                <Image src={bit} alt='bitBucket' width={20} height={20} />
-                Bitbucket
-              </a>
-            )}
-            {project && (project.figmaLink || project.sampleFigmaLink) && (
-              <>
-                {' '}
-                <a href={project.figmaLink || project.sampleFigmaLink} target='_blank' rel='noreferrer'>
-                  <Image src={figma} alt='figma' width={20} height={20} />
-                  {project.sampleFigmaLink ? 'Sample Prototype' : 'Prototype'}
-                </a>
-                <hr />{' '}
-              </>
-            )}
-
-            {project && (project.githubLink || project.samplegithubLink) && (
-              <>
-                {' '}
-                <a href={project.githubLink || project.samplegithubLink} target='_blank' rel='noreferrer'>
+            <div className='link-container'>
+              {project?.github && (
+                <a href={project.github} target='_blank' rel='noreferrer'>
                   <Image src={github} alt='github' width={20} height={20} />
                   Github
                 </a>
-                <hr />{' '}
-              </>
-            )}
+              )}
+              {project?.bit && (
+                <a href={project.bit} target='_blank' rel='noreferrer'>
+                  <Image src={bit} alt='bitBucket' width={20} height={20} />
+                  Bitbucket
+                </a>
+              )}
+              {project && (project.figmaLink || project.sampleFigmaLink) && (
+                <>
+                  {' '}
+                  <a href={project.figmaLink || project.sampleFigmaLink} target='_blank' rel='noreferrer'>
+                    <Image src={figma} alt='figma' width={20} height={20} />
+                    {project.sampleFigmaLink ? 'Sample Prototype' : 'Prototype'}
+                  </a>
+                  <hr />{' '}
+                </>
+              )}
 
-            {project?.noUrl && (
-              <span>
-                <Image src={code} alt='code' />
-                Link Unavailable
-              </span>
-            )}
+              {project && (project.githubLink || project.samplegithubLink) && (
+                <>
+                  {' '}
+                  <a href={project.githubLink || project.samplegithubLink} target='_blank' rel='noreferrer'>
+                    <Image src={github} alt='github' width={20} height={20} />
+                    Github
+                  </a>
+                  <hr />{' '}
+                </>
+              )}
 
-            {project?.url && (
-              <a href={project.url} target='_blank' rel='noreferrer'>
-                <Image src={code} alt='code' />
-                Deliverable
-              </a>
-            )}
+              {project?.noUrl && (
+                <span>
+                  <Image src={code} alt='code' />
+                  Link Unavailable
+                </span>
+              )}
 
-            {project?.sampleUrl && (
-              <a href={project.sampleUrl} target='_blank' rel='noreferrer'>
-                <Image src={code} alt='code' />
-                Sample Deliverable
-              </a>
-            )}
+              {project?.url && (
+                <a href={project.url} target='_blank' rel='noreferrer'>
+                  <Image src={code} alt='code' />
+                  Deliverable
+                </a>
+              )}
+
+              {project?.sampleUrl && (
+                <a href={project.sampleUrl} target='_blank' rel='noreferrer'>
+                  <Image src={code} alt='code' />
+                  Sample Deliverable
+                </a>
+              )}
+            </div>
+            {project?.sampleStatus && <span className='warn'>Some work are hidden due to client non-disclosure agreement</span>}
           </div>
-          {project?.sampleStatus && <span className='warn'>Some work are hidden due to client non-disclosure agreement</span>}
-        </div>
+        )}
       </div>
     </div>
   );

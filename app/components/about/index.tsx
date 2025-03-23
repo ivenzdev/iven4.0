@@ -60,28 +60,30 @@ function About() {
 
   return (
     <div className='about page' id='about'>
-      <div className={`about-content ${lang ? 'cn' : ''}`}>
-        <div className='flex-wrap'>
-          <div className='content-flex'>
-            {c1.map(({ header, content }, key) => (
-              <div className='content-flex-div1' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
-                <h4>{header}</h4>
-                {content}
-              </div>
-            ))}
-          </div>
-          <div className='content-flex'>
-            <div className='content-flex-mid-container' data-aos='fade-up'>
-              <div className='img' />
+      <div className='page-content'>
+        <div className={`about-content ${lang ? 'cn' : ''}`}>
+          <div className='flex-wrap'>
+            <div className='content-flex'>
+              {c1.map(({ header, content }, key) => (
+                <div className='content-flex-div1' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
+                  <h4>{header}</h4>
+                  {content}
+                </div>
+              ))}
             </div>
-          </div>
-          <div className='content-flex'>
-            {c2.map(({ header, content }, key) => (
-              <div className='content-flex-div2' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
-                <h4>{header}</h4>
-                <p> {content}</p>
+            <div className='content-flex'>
+              <div className='content-flex-mid-container' data-aos='fade-up'>
+                <div className='img' />
               </div>
-            ))}
+            </div>
+            <div className='content-flex'>
+              {c2.map(({ header, content }, key) => (
+                <div className='content-flex-div2' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
+                  <h4>{header}</h4>
+                  <p> {content}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
