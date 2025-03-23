@@ -50,9 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-      </head>
       {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId='G-F2VQ070RJY' />}
       <body>{children}</body>
     </html>
