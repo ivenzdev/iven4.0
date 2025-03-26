@@ -157,7 +157,7 @@ export default function Page() {
               }
             : {}
         }>
-        <Home setCurrentSectionIndex={setCurrentSectionIndex} />
+        <Home />
         <About />
         <Skill />
         <Portfolio />

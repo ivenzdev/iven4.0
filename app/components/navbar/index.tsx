@@ -59,7 +59,18 @@ function Index({ linkItems }: IndexProps) {
           {linkItems &&
             linkItems.map(({ name, to }, key) => (
               <React.Fragment key={key}>
-                <ScrollLink to={to} smooth duration={650} activeClass='active' spy offset={-110} onClick={() => SetopenMenu(false)}>
+                <ScrollLink
+                  to={to}
+                  href={`#${to}`}
+                  aria-label={name}
+                  smooth
+                  duration={650}
+                  activeClass='active'
+                  spy
+                  offset={-110}
+                  onClick={() => {
+                    SetopenMenu(false);
+                  }}>
                   <span>{name}</span>
                 </ScrollLink>
                 <hr />

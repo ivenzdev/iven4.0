@@ -27,18 +27,17 @@ const Contact: React.FC = () => {
             <ContactForm isNonEnglish={isNonEnglish} />
             {
               <div className='contact-page-content-icons'>
-                <a href='https://www.linkedin.com/in/iven-zhang-511b86205/' target='_blank' rel='noreferrer' key='0'>
-                  <Image src={linkin} alt='linkedin icon' />
+                <a href='https://www.linkedin.com/in/iven-zhang-511b86205/' target='_blank' rel='noreferrer' key='0' aria-label="Visit Iven Zhang's LinkedIn profile">
+                  <Image src={linkin} alt='LinkedIn - Connect with Iven Zhang' width={24} height={24} />
                 </a>
-                <a href='mailto:ivenzhangg@gmail.com' target='_blank' rel='noreferrer' key='2'>
-                  <Image src={mail} alt='mail icon' />
+                <a href='mailto:ivenzhangg@gmail.com' target='_blank' rel='noreferrer' key='2' aria-label='Email Iven Zhang'>
+                  <Image src={mail} alt='Email - Contact Iven Zhang' width={24} height={24} />
                 </a>
-                <a href='https://www.instagram.com/_yesloiven/?hl=en' target='_blank' rel='noreferrer' key='3'>
-                  <Image src={inst} alt='instagram icon' />
+                <a href='https://www.instagram.com/_yesloiven/?hl=en' target='_blank' rel='noreferrer' key='3' aria-label='Follow Iven Zhang on Instagram'>
+                  <Image src={inst} alt='Instagram - Follow Iven Zhang' width={24} height={24} />
                 </a>
               </div>
             }
-            ,
           </div>
         </div>
 

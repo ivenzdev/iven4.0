@@ -57,6 +57,8 @@ const SideNav: React.FC<SideNavProps> = ({ linkItems, setCurrentSectionIndex, wi
           linkItems.map(({ name, to }, key) => (
             <Link
               to={to}
+              href={`#${to}`}
+              aria-label={name}
               key={key}
               smooth='easeOutQuint'
               duration={1000}

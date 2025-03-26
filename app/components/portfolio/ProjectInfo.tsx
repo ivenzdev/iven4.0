@@ -70,22 +70,26 @@ function ProjectInfo({ project, setInfoKey }: ProjectInfoProps) {
 
             <div className='link-container'>
               {project?.github && (
-                <a href={project.github} target='_blank' rel='noreferrer'>
-                  <Image src={github} alt='github' width={20} height={20} />
+                <a href={project.github} target='_blank' rel='noreferrer' aria-label={`View ${t(`portfolio.projects.${project.key}.label`)} on GitHub`}>
+                  <Image src={github} alt={`GitHub repository for ${t(`portfolio.projects.${project.key}.label`)}`} width={20} height={20} />
                   {t('portfolio.projectInfo.github')}
                 </a>
               )}
               {project?.bit && (
-                <a href={project.bit} target='_blank' rel='noreferrer'>
-                  <Image src={bit} alt='bitBucket' width={20} height={20} />
+                <a href={project.bit} target='_blank' rel='noreferrer' aria-label={`View ${t(`portfolio.projects.${project.key}.label`)} on Bitbucket`}>
+                  <Image src={bit} alt={`Bitbucket repository for ${t(`portfolio.projects.${project.key}.label`)}`} width={20} height={20} />
                   {t('portfolio.projectInfo.bitbucket')}
                 </a>
               )}
-              {project && (project.figmaLink || project.sampleFigmaLink) && (
+              {project && project.figmaLink && (
                 <>
                   {' '}
-                  <a href={project.figmaLink || project.sampleFigmaLink} target='_blank' rel='noreferrer'>
-                    <Image src={figma} alt='figma' width={20} height={20} />
+                  <a
+                    href={project.figmaLink}
+                    target='_blank'
+                    rel='noreferrer'
+                    aria-label={`View ${t(`portfolio.projects.${project.key}.label`)} ${project.sampleFigmaLink ? 'sample prototype' : 'prototype'} on Figma`}>
+                    <Image src={figma} alt={`Figma ${project.sampleFigmaLink ? 'sample prototype' : 'prototype'} for ${t(`portfolio.projects.${project.key}.label`)}`} width={20} height={20} />
                     {project.sampleFigmaLink ? t('portfolio.projectInfo.samplePrototype') : t('portfolio.projectInfo.prototype')}
                   </a>
                   <hr />{' '}

@@ -57,6 +57,8 @@ const Home: React.FC = () => {
               <div className='home-content-button'>
                 <Link
                   to='contact'
+                  href='#contact'
+                  aria-label='Request Resume'
                   smooth
                   className='home-content-button1-link'
                   duration={700}
@@ -73,10 +75,12 @@ const Home: React.FC = () => {
 
               <div className='home-content-button'>
                 <Link
+                  to='portfolio'
+                  href='#portfolio'
+                  aria-label='View Work'
                   duration={700}
                   offset={offset}
                   className='home-content-button2-link'
-                  to='portfolio'
                   smooth
                   onClick={() => {
                     const contactSection = document.querySelector('.portfolio.page');
