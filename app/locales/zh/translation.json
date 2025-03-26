@@ -13,62 +13,168 @@
     "last": "浩贤"
   },
   "greeting": "用八个字介绍自己",
-  "description": "我是一名专门从事 React.js 和 Next.js 开发的应用程序开发人员，在初创环境方面拥有丰富的经验，并擅长构建 0-1 应用程序.",
-  "requestResume": "請求履歷",
+"description": "专修 React.js 和 Next.js，创业公司全能牛马。前后端通吃，UI 亲自画，咖啡机坏了也修。我老板曾高度评价：Iven，一个人能干二十头牛马的活。我谢谢你。",
+  "requestResume": "请求履历",
+  "viewWork": "查看我的作品",
   "about": {
     "education": {
-      "title": "學 位 教 育",
-      "university": "理 海 大 學",
-      "graduationYear": "畢 業 于 2023",
-      "major": "專 業: 計 算 機 工 程"
+      "title": "学位教育",
+      "university": "理海大学",
+      "graduationYear": "毕业于 2023",
+      "major": "专业: 计算机工程"
     },
     "expertise": {
-      "title": "我 的 專 長",
+      "title": "我的专长",
       "items": [
-        "網 頁 設 計",
-        "全 端 開 發",
-        "軟 件 工 程",
-        "平 面 設 計"
+        "全端开发",
+        "软件工程",
+        "UI & UX 优化",
+        "平面设计",
+        "网站 SEO",
+        "品牌设计",
+        "市场营销"
       ]
     },
     "development": {
-      "title": "開 發 範 疇",
+      "title": "开发范畴",
       "items": [
-        "作 品 集 展 示",
-        "資 料 視 覺 化 與 分 析",
-        "社 交 媒 體 平 台",
-        "資 料 管 理 系 統",
-        "電 子 商 務 解 決 方 案"
+        "作品集展示",
+        "资料可视化与分析",
+        "社交媒体平台",
+        "资料管理系统",
+        "电子商务解决方案"
       ]
     },
     "stats": {
       "experience": {
-        "title": "多 年 網 頁 經 驗",
-        "value": "4+"
-      },
-      "websites": {
-        "title": "網 頁 建 造",
-        "value": "50+"
-      },
-      "connections": {
-        "title": "人 脈 關 係",
-        "value": "100+"
+        "title": "开发经验",
+        "value": "4 年"
       },
       "satisfaction": {
-        "title": "客 戶 滿 意 度",
-        "value": "95%+"
+        "title": "完成项目",
+        "value": "20+"
       },
-      "contact": {
-        "title": "聯 系 方 式"
+      "techStack": {
+        "title": "技术栈",
+        "value": "15+"
+      },
+      "websites": {
+        "title": "网站访客",
+        "value": "70万+"
+      },
+      "performance": {
+        "title": "应用性能率",
+        "value": "95%+"
       }
     }
   },
+  "skills": {
+    "title": "技术栈",
+    "subtitle": "软件知识"
+  },
   "contact": {
-    "collaboration": "合 作 發 展，共 創 未 來",
-    "buildTogether": "開 創 新 起 點，風 雨 共 兼 程。",
-    "sendInquiry": "發送詢問",
-    "preferEmail": "郵箱更方便？",
-    "successMessage": "發送成功，查看郵箱確認",
-    "errorMessage": "內部服務器錯誤，請使用下面的電子郵件"
+    "collaboration": "合作发展，共创未来",
+    "buildTogether": "开创新起点，风雨共兼程。",
+    "sendInquiry": "发送询问",
+    "preferEmail": "邮箱更方便？",
+    "successMessage": "发送成功，查看邮箱确认",
+    "errorMessage": "内部服务器错误，请使用下面的电子邮件",
+    "subjects": ["应用开发", "前端开发", "作品集设计", "网站原型", "请求履历", "随便聊聊", "其他"],
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "selectApplied": "请选择适用项目",
+      "howCanIHelp": "我能帮您什么？"
+    },
+    "validation": {
+      "nameRequired": "姓名必须在3到40个字符之间",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "contentLength": "内容必须在20到500个字符之间",
+      "subjectRequired": "请至少选择一个选项"
+    },
+    "icons": {
+      "warning": "警告图标",
+      "success": "成功图标",
+      "rocket": "火箭图标",
+      "takeoff": "起飞图标"
+    },
+    "copyright": "版权所有。由张浩贤设计和开发。"
+  },
+  "roles": {
+    "founder": "创始人",
+    "fullstackDev": "全端开发者",
+    "softwareEng": "软件工程师",
+    "webDesigner": "网页设计师"
+  },
+  "codeWrapper": {
+    "start": "<",
+    "end": "/>"
+  },
+  "portfolio": {
+    "title": "我的作品",
+    "subtitle": "软件与网页应用",
+    "projectInfo": {
+      "description": "描述",
+      "techStack": "技术栈",
+      "links": "链接",
+      "prototype": "原型",
+      "github": "Github",
+      "bitbucket": "Bitbucket",
+      "deliverable": "成品",
+      "samplePrototype": "示例原型",
+      "linkUnavailable": "链接不可用",
+      "sampleDeliverable": "示例成品",
+      "nda": "部分作品因客户保密协议而隐藏"
+    },
+    "projects": {
+      "rentvest": {
+        "label": "Rent Vest",
+        "about": "租购房地产平台",
+        "year": ["2025", "初创公司", "CTO"],
+        "description": "共同创立了一个改变游戏规则的房地产平台，让购房梦想成真。作为首席技术产品工程师，我正在打造一个AI驱动的平台，将复杂的租购过程转变为无缝旅程。我们正在革新人从租房到拥房的方式，一次一个物业。"
+      },
+      "celebrate": {
+        "label": "Celebrate Life",
+        "about": "活动策划与回忆分享应用",
+        "year": ["2024", "初创公司","牛马打工"],
+        "description": "作为全职牛马前端开发工程师，我主导开发了一个创新的数字平台，彻底改变了人们纪念和分享生命中重要时刻的方式。采用尖端技术构建，这款应用将活动策划与数字故事讲述完美结合，为用户提供创建、组织和保存珍贵回忆的无缝体验。特色功能包括互动时间线、协作活动策划和AI驱动的记忆建议。"
+      },
+      "vest": {
+        "label": "Vest Exchange Clone",
+        "about": "去中心化永续期货平台",
+        "year": ["个人作品集"],
+        "description": "挑战自己从零重建Vest Exchange的加密货币交易平台。构建了一个克隆版，展现技术而已"
+      },
+      "stealth": {
+        "label": "Stealth",
+        "about": "艺术灵感内容平台",
+        "year": ["2024", "CEO", "独资", "已售出"],
+        "description": "设计并推出一个革新数字内容策展的高性能平台。采用现代技术栈构建，优化性能实现卓越用户体验，凭借独特的艺术灵感界面和无缝交互体验吸引了80万+全球用户。通过战略合作和创新广告解决方案实现商业变现，为内容平台设计树立新标准。"
+      },
+      "enrolld": {
+        "label": "Enrolld",
+        "about": "大学课程选课应用",
+        "year": ["2023", "大学毕业项目"],
+        "description": "通过AI驱动的平台革新了大学课程注册，使选课像网上购物一样简单。建立了智能功能，帮助学生规划学术旅程，同时为教职员工提供强大的课程管理工具。为超过5,000名学生带来改变！"
+      },
+      "portfolio": {
+        "label": "IZ | Engineer",
+        "about": "张浩贤的作品集网站",
+        "year": ["2023", "个人作品集", "静态网站"],
+        "description": "我的数字游乐场，代码与创意在此相遇！这个作品集通过互动设计和流畅动画展示我作为开发者的旅程。用英文和中文精心打造，这是我向未来合作伙伴说'Hello World'的方式。"
+      },
+      "ecapital": {
+        "label": "eCapital",
+        "about": "投资初创公司",
+        "year": ["2022", "初创公司", "第一桶金"],
+        "description": "通过时尚现代的网站改造曼哈顿投资公司的数字形象。通过清晰的设计和直观的导航，使复杂的金融服务变得平易近人。因为明智的投资值得智慧的设计！"
+      },
+      "cag": {
+        "label": "CAG",
+        "about": "无聊大学摸鱼项目",
+        "year": ["2022", "个人作品集","静态网站"],
+        "description": "我在大学时期的第一次网页设计尝试！创建了一个虚拟会计公司网站，探索网页开发的基础。玩转布局、动画和用户流程 - 因为即使是练习项目也值得有型有款。嘿，每个人都是从这里开始的！🚀"
+      }
+    }
   }
 } 

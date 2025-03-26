@@ -51,44 +51,44 @@ export default function Page() {
 
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
 
-  // useEffect(() => {
-  //   // Common function for both scroll and resize events
-  //   const handleViewportChange = () => {
-  //     if (window.innerHeight > 700 && window.innerWidth > 760) {
-  //       const height = window.innerHeight < 700 ? 700 : window.innerHeight;
-  //       const index = Math.round(window.pageYOffset / height);
-  //       const link = linkItems.find((item) => item.id === index);
+  useEffect(() => {
+    // Common function for both scroll and resize events
+    const handleViewportChange = () => {
+      if (window.innerHeight > 700 && window.innerWidth > 940) {
+        const height = window.innerHeight < 700 ? 700 : window.innerHeight;
+        const index = Math.round(window.pageYOffset / height);
+        const link = linkItems.find((item) => item.id === index);
 
-  //       if (link) {
-  //         scroller.scrollTo(link.to, {
-  //           duration: 600,
-  //           smooth: 'easeOutQuart',
-  //           offset: 0,
-  //         });
-  //       }
-  //     }
-  //   };
+        if (link) {
+          scroller.scrollTo(link.to, {
+            duration: 300,
+            smooth: 'easeOutQuart',
+            offset: 0,
+          });
+        }
+      }
+    };
 
-  //   // Debounced scroll handler
-  //   const handleScroll = _.debounce(() => {
-  //     handleViewportChange();
-  //   }, 500);
+    // Debounced scroll handler
+    const handleScroll = _.debounce(() => {
+      handleViewportChange();
+    }, 700);
 
-  //   // Resize handler
-  //   const handleResize = () => {
-  //     handleViewportChange();
-  //   };
+    // Resize handler
+    const handleResize = () => {
+      handleViewportChange();
+    };
 
-  //   // Add event listeners
-  //   window.addEventListener('scroll', handleScroll);
-  //   window.addEventListener('resize', handleResize);
+    // Add event listeners
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
-  //   // Clean up
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, [linkItems]);
+    // Clean up
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [linkItems]);
 
   // Add state for sidenav width
   const [sidenavWidth, setSidenavWidth] = useState(650);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { t } from '../../utils/translations';
 
 class Autotype extends Component {
   updateInterval: NodeJS.Timeout | null = null;
@@ -8,7 +9,7 @@ class Autotype extends Component {
   };
 
   componentDidMount() {
-    const p = ['Founder', 'Fullstack Developer', 'Software Engineer', 'Web Designer'];
+    const p = [t('roles.founder'), t('roles.fullstackDev'), t('roles.softwareEng'), t('roles.webDesigner')];
     let forward = true;
     let currentloop = 0;
     let time = 0;
@@ -56,10 +57,10 @@ class Autotype extends Component {
   render() {
     return (
       <p className='autotext'>
-        {'<'}
+        {t('codeWrapper.start')}
         {this.state.display}
         <span>|</span>
-        {'/>'}
+        {t('codeWrapper.end')}
       </p>
     );
   }

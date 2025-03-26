@@ -3,6 +3,7 @@ import ProjectInfo from '../portfolio/ProjectInfo';
 import { projects } from '../portfolio/Projects';
 import './portfolio.scss';
 import Image from 'next/image';
+import { t } from '../../utils/translations';
 
 function Portfolio() {
   const [infoKey, setInfoKey] = useState<number>(-1);
@@ -34,37 +35,32 @@ function Portfolio() {
     };
   }, [isModalOpen]);
 
-  const currentLanguage = process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE;
-  const lang = currentLanguage !== 'en';
-
   return (
     <div className='portfolio page' id='portfolio' ref={projectRef}>
       <div className='page-content'>
-        <div className='portfolio-content-wrap'>
-          <div className='portfolio-content'>
-            <div className='portfolio-content__header'>
-              <h3>My Work</h3>
-              <p>{lang ? '近 期 作 品' : 'Software & Web Applications'}</p>
-            </div>
+        <div className='portfolio-content'>
+          <div className='portfolio-content__header'>
+            <h3>{t('portfolio.title')}</h3>
+            <p>{t('portfolio.subtitle')}</p>
+          </div>
 
-            <div className='portfolio-content__grid'>
-              {projects.map((project, key) => (
-                <div key={key} className='item' onClick={() => openProjectModal(key)}>
-                  <div className='header-grid'>
-                    <Image src={project.img} alt='project-img' width={35} height={35} />
-                    <div>
-                      <h4>
-                        {project?.label}
-                        {project?.year.map((i, key) => (
-                          <span key={key}>{i}</span>
-                        ))}
-                      </h4>
-                      <p>{project?.about}</p>
-                    </div>
+          <div className='portfolio-content__grid'>
+            {projects.map((project, key) => (
+              <div key={key} className='item' onClick={() => openProjectModal(key)}>
+                <div className='header-grid'>
+                  <Image src={project.img} alt='project-img' width={35} height={35} />
+                  <div>
+                    <h4>
+                      {project?.label}
+                      {project?.year.map((i, key) => (
+                        <span key={key}>{i}</span>
+                      ))}
+                    </h4>
+                    <p>{project?.about}</p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ interface ContactFormProps {
   isNonEnglish: boolean;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ isNonEnglish }) => {
+const ContactForm: React.FC<ContactFormProps> = () => {
   const [state, setState] = useState<ContactState>({
     name: '',
     email: '',
@@ -203,7 +203,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isNonEnglish }) => {
     },
   ];
 
-  const selections = isNonEnglish ? (t('contact.subjects.zh') as string[]) : (t('contact.subjects.en') as string[]);
+  const selections = t('contact.subjects') as string[];
   return (
     <form onSubmit={onSubmit}>
       {inputs.map(({ name, tag, classname, ref, label }, key) => (

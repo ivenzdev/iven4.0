@@ -46,28 +46,26 @@
     },
     "stats": {
       "experience": {
-        "title": "Development Experience",
+        "title": "Dev Experience",
         "value": "4 years"
       },
       "satisfaction": {
         "title": "Project Completed",
         "value": "20+"
       },
-      "websites": {
+      "techStack": {
         "title": "Tech Stack",
         "value": "15+"
       },
-      "user": {
+      "websites": {
         "title": "Website Visitors",
         "value": "0.7 million+"
       },
-      "connections": {
+      "performance": {
         "title": "App Performance Rate",
         "value": "95%+"
-      },
-      "contact": {
-        "title": "Get In Touch"
       }
+     
     }
   },
   "contact": {
@@ -77,9 +75,7 @@
     "preferEmail": "Prefer Email?",
     "successMessage": "Successfully sent, check your email for confirmation",
     "errorMessage": "Internal server error, please use the email below",
-    "subjects": {
-      "en": ["App Dev", "Frontend Dev", "Portfolios Design", "Website Prototypes", "Request Resume","Just Bored", "Others"]
-    },
+    "subjects": ["App Dev", "Frontend Dev", "Portfolios Design", "Website Prototypes", "Request Resume", "Just Bored", "Others"],
     "form": {
       "name": "Name",
       "email": "Email",
@@ -99,5 +95,82 @@
       "takeoff": "Take off icon"
     },
     "copyright": "All Rights Reserved. Designed and Developed by Iven Zhang."
+  },
+  "roles": {
+    "founder": "Founder",
+    "fullstackDev": "Fullstack Developer",
+    "softwareEng": "Software Engineer",
+    "webDesigner": "Web Designer"
+  },
+  "codeWrapper": {
+    "start": "<",
+  "end": "/>"
+  },
+  "portfolio": {
+    "title": "My Work",
+    "subtitle": "Software & Web Applications",
+    "projectInfo": {
+      "description": "Description",
+      "techStack": "Tech Stack",
+      "links": "Links",
+      "prototype": "Prototype",
+      "github": "Github",
+      "bitbucket": "Bitbucket",
+      "deliverable": "Deliverable"
+    },
+    "projects": {
+      "rentvest": {
+        "label": "Rent Vest",
+        "about": "Real Estate Platform for Rent to Own",
+        "year": ["2025", "Startup"],
+        "description": "Co-founded a game-changing real estate platform that's making homeownership dreams come true. As Lead Technical Product Engineer, I'm crafting an AI-powered platform that turns the complex rent-to-own process into a seamless journey. We're revolutionizing how people transition from renting to owning, one property at a time."
+      },
+      "celebrate": {
+        "label": "Celebrate Life",
+        "about": "Event Planning & Memory Sharing App",
+        "year": ["2024", "Startup"],
+        "description": "As a full-time frontend developer, I led the development of an innovative digital platform that revolutionizes how people commemorate and share life's meaningful moments. Built with cutting-edge technology, this app combines event planning with digital storytelling, offering a seamless experience for creating, organizing, and preserving cherished memories. Features include interactive timelines, collaborative event planning, and AI-powered memory suggestions."
+      },
+      "vest": {
+        "label": "Vest Exchange Clone",
+        "about": "Decentralized Perpetual Futures Exchange",
+        "year": ["2024"],
+        "description": "Challenged myself to recreate Vest Exchange's crypto trading platform from scratch. Built a clone to showcase technical skills."
+      },
+      "stealth": {
+        "label": "Stealth",
+        "about": "Art-Inspired Content Platform",
+        "year": ["2024", "Sole Proprietorship", "Sold"],
+        "description": "Architected and launched a high-performance content platform that revolutionized digital content curation. Built with modern tech stack and optimized for exceptional performance, the platform attracted 800,000+ global users with its unique art-inspired interface and seamless user experience. From concept to acquisition, this project combined cutting-edge technology with artistic vision, creating a space where content meets creativity. Successfully monetized through strategic partnerships and innovative advertising solutions, setting new standards in content platform design. A journey from idea to exit that proved innovation and user-centric design can transform the digital landscape! 🚀"
+      },
+      "enrolld": {
+        "label": "Enrolld",
+        "about": "College Course Enrollment App",
+        "year": ["2023", "College Capstone"],
+        "description": "Revolutionized college course registration with an AI-powered platform that makes enrollment as easy as online shopping. Built smart features that help students plan their academic journey while giving staff powerful tools to manage course offerings. A game-changer for over 5,000 students!"
+      },
+      "portfolio": {
+        "label": "IZ | Engineer",
+        "about": "Iven Zhang's Portfolio Website",
+        "year": ["2023", "Self's Portfolio"],
+        "description": "My digital playground where code meets creativity! This portfolio showcases my journey as a developer through interactive designs and smooth animations. Built with love in both English and Chinese, it's my way of saying 'Hello World' to future collaborators."
+      },
+      "ecapital": {
+        "label": "eCapital",
+        "about": "Investment Startup Company",
+        "year": ["2022", "Startup", "Static"],
+        "description": "Transformed a Manhattan investment firm's digital presence with a sleek, modern website. Made complex financial services feel approachable through clean design and intuitive navigation. Because smart investments deserve smart design!"
+      },
+      "cag": {
+        "label": "CAG",
+        "about": "Cloud Accounting Group",
+        "year": ["2022", "Side Project", "Static"],
+        "description": "My first dive into web design during college! Created a fun, fictional accounting firm website to explore the basics of web development. Played around with layouts, animations, and user flows - because even practice projects deserve some style. Hey, everyone starts somewhere! 🚀"
+      }
+    }
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "subtitle": "Knowledge in Software"
   }
 } 

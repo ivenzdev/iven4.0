@@ -40,49 +40,32 @@ function Index({ linkItems }: IndexProps) {
     };
   }, [scroll, openMenu]);
 
-  const handleLanguageToggle = () => {
-    const currentLang = getCurrentLanguage();
-    const hostname = window.location.hostname;
-    const protocol = window.location.protocol;
-    const pathname = window.location.pathname;
-
-    if (currentLang === 'en') {
-      // Switch to Chinese
-      const zhDomain = hostname.includes('.')
-        ? `${protocol}//zh.${hostname.substring(hostname.indexOf('.'))}${pathname}`
-        : `${protocol}//zh.${hostname}${pathname}`;
-      window.location.href = zhDomain;
-    } else {
-      // Switch to English
-      const enDomain = hostname.includes('zh.') ? `${protocol}//${hostname.substring(hostname.indexOf('zh.') + 3)}${pathname}` : hostname;
-      window.location.href = `${protocol}//${enDomain}${pathname}`;
-    }
-  };
-
   return (
     <div className='navBar'>
-      <NextLink href='/' passHref>
-        <Logo />
-      </NextLink>
+      <div className='navBar__content-wrap'>
+        <NextLink href='/' passHref>
+          <Logo />
+        </NextLink>
 
-      <div className='navBar__content'>
-        <Menu SetopenMenu={SetopenMenu} openMenu={openMenu} />
-        <div className='sep' />
-        <div onClick={handleLanguageToggle} className='flag'>
-          <Image src={getCurrentLanguage() === 'en' ? en : cn} alt='language icon' />
+        <div className='navBar__content'>
+          <Menu SetopenMenu={SetopenMenu} openMenu={openMenu} />
+          <div className='sep' />
+          <div className='flag'>
+            <Image src={getCurrentLanguage() === 'en' ? en : cn} alt='language icon' />
+          </div>
         </div>
-      </div>
 
-      <div className={`navBar__nav-items-container ${openMenu && 'open'}`}>
-        {linkItems &&
-          linkItems.map(({ name, to }, key) => (
-            <React.Fragment key={key}>
-              <ScrollLink to={to} smooth duration={650} offset={-35} activeClass='active' spy onClick={() => SetopenMenu(false)}>
-                <span>{name}</span>
-              </ScrollLink>
-              <hr />
-            </React.Fragment>
-          ))}
+        <div className={`navBar__nav-items-container ${openMenu && 'open'}`}>
+          {linkItems &&
+            linkItems.map(({ name, to }, key) => (
+              <React.Fragment key={key}>
+                <ScrollLink to={to} smooth duration={650} activeClass='active' spy offset={-110} onClick={() => SetopenMenu(false)}>
+                  <span>{name}</span>
+                </ScrollLink>
+                <hr />
+              </React.Fragment>
+            ))}
+        </div>
       </div>
     </div>
   );

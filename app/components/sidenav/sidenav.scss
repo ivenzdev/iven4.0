@@ -25,15 +25,16 @@
 
 @media screen and (max-width: 600px) {
     .logo-svg {
-        height: 35px;
+        height: 20px;
+        width: auto;
     }
 }
-@media screen and (max-width: 420px) {
-    .logo-svg {
-        height: 28px;
-        width: 125px;
-    }
-}
+// @media screen and (max-width: 420px) {
+//     .logo-svg {
+//         height: 28px;
+//         width: 125px;
+//     }
+// }
 
 .logo-svg g {
     transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
@@ -148,7 +149,6 @@
     padding: 10px 0;
     padding-left: 13px;
     font-size: 1.4rem;
-    font-family: "Cinzel", serif;
     transition: all 0.2s ease-out;
     opacity: 0;
     transform: translateX(-3px);

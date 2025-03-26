@@ -7,9 +7,6 @@ import Image from 'next/image';
 import './about.scss';
 
 function About() {
-  const currentLanguage = process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE;
-  const lang = currentLanguage !== 'en';
-
   const content1 = [
     {
       header: t('about.education.title'),
@@ -41,8 +38,8 @@ function About() {
       content: t('about.stats.satisfaction.value'),
     },
     {
-      header: t('about.stats.user.title'),
-      content: t('about.stats.user.value'),
+      header: t('about.stats.techStack.title'),
+      content: t('about.stats.techStack.value'),
     },
     {
       header: t('about.stats.websites.title'),
@@ -50,8 +47,8 @@ function About() {
     },
 
     {
-      header: t('about.stats.connections.title'),
-      content: t('about.stats.connections.value'),
+      header: t('about.stats.performance.title'),
+      content: t('about.stats.performance.value'),
     },
   ];
 
@@ -61,7 +58,7 @@ function About() {
   return (
     <div className='about page' id='about'>
       <div className='page-content'>
-        <div className={`about-content ${lang ? 'cn' : ''}`}>
+        <div className={`about-content`}>
           <div className='flex-wrap'>
             <div className='content-flex'>
               {c1.map(({ header, content }, key) => (

@@ -20,7 +20,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 600px;
+    max-width: 650px;
+    width: 100%;
 }
 
 .contact-page-content button {
@@ -52,12 +53,11 @@
 }
 
 .contact-page-content h3 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     font-weight: 600;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    // font-family: "Cinzel", serif;
 }
 
 .contact-page-content h3 img {
@@ -75,9 +75,10 @@
 
 .contact-page-content h5 {
     margin-top: 40px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
+    color: rgba(1, 120, 223, 0.7);
 }
 
 .contact-page-content h5 span {
@@ -86,15 +87,15 @@
 
 .contact-page-content h5 a {
     text-decoration: underline;
-    color: #202124;
+    color: rgba(1, 120, 223, 0.7);
     margin-left: 3px;
 }
 
 .contact-page-content p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-family: adobe-garamond-pro, serif;
+    font-size: 1.4rem;
+    font-family: proxima-nova, sans-serif;
+    color: rgb(108, 108, 108);
+    margin-bottom: 15px;
 }
 .contact__right__form {
     width: 500px;
@@ -271,6 +272,12 @@
         border: 1px solid var(--theme-primary);
     }
 }
+
+@media screen and (max-width: 420px) {
+    .input-selections {
+        font-size: 1.2rem;
+    }
+}
 .input-selections div {
     display: flex;
     align-items: center;
@@ -403,9 +410,10 @@
 .contact-page-content h5.contact-error-message.--success {
     color: #03b640;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 940px) {
     .contact-page-content {
-        width: 500px;
+        width: 100%;
+        max-width: unset;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -413,7 +421,7 @@
         width: 450px;
         left: -250px;
     }
-    .contact-page-content h3 {
+    h3 {
         font-size: 2rem;
     }
     .contact-page-content p {
@@ -445,73 +453,18 @@
     }
 }
 
-@media screen and (max-width: 760px) {
-    .contact.page {
-        padding-bottom: 90px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .contact.page {
-        padding-bottom: 100px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .contact-page-content h3 img {
-        height: 17px;
-    }
-    .contact-page-content h5.contact-error-message {
-        font-size: 0.9rem;
-    }
-    .contact-page-content-container {
-        padding: 0;
-    }
-
-    .contact-page-content h3 {
-        font-size: 1.8rem;
-    }
-    .contact-page-content h4 {
-        font-size: 1.2rem;
-    }
-
-    .form-input .placeholder span {
-        font-size: 1.1rem;
-    }
-
-    .form-input .indicator span {
-        font-size: 1rem;
-    }
-
-    .input-selections span {
-        font-size: 1.2rem;
-    }
-
-    .input-selections {
-        margin-right: 20px;
-        margin-bottom: 7px;
-    }
-
-    .contact-page-content button span {
-        font-size: 1.2rem;
-    }
-    .contact-page-content h5 {
-        font-size: 1.2rem;
-    }
-}
-
 h4.copyright {
     color: var(--theme-primary);
     font-size: 0.9rem;
     font-weight: 300;
     text-align: center;
-    white-space: nowrap;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
+    width: 100%;
 }
 
 @media screen and (min-width: 1500px) {
@@ -649,6 +602,22 @@ input {
     background-color: transparent;
 }
 
+.contact.page .page-content.--contact {
+    background-color: white;
+    padding: 0 70px;
+}
+
+@media screen and (max-width: 940px) {
+    .contact.page .page-content.--contact {
+        padding: 0 0px;
+        max-width: 650px;
+    }
+}
+
+.page-content.--contact {
+    z-index: 10;
+}
+
 textarea {
     border: none;
     outline: none;
@@ -656,15 +625,18 @@ textarea {
 }
 
 @media screen and (max-width: 940px) {
-    .contact-page-content {
-        width: 100%;
-    }
     h4.copyright {
-        margin-top: 50px;
-        position: relative;
+        // max-width: 70%;
+        transform: translate(-50%, 50px);
     }
 }
 
+@media screen and (max-width: 760px) {
+    h4.copyright {
+        transform: translate(-50%, 50px);
+        max-width: 70%;
+    }
+}
 .page-content.--contact {
     padding: 0;
     width: 100%;
