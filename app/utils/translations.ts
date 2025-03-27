@@ -1,6 +1,6 @@
 import enTranslations from '../locales/en/translation.json';
 import zhTranslations from '../locales/zh/translation.json';
-import jpTranslations from '../locales/jp/translation.json';
+import jaTranslations from '../locales/ja/translation.json';
 import koTranslations from '../locales/ko/translation.json';
 import frTranslations from '../locales/fr/translation.json';
 import ruTranslations from '../locales/ru/translation.json';
@@ -11,7 +11,7 @@ type Translations = {
     [key: string]: string | string[] | Translations;
 };
 
-type Language = 'en' | 'zh' | 'jp' | 'ko' | 'fr' | 'ru' | 'de';
+type Language = 'en' | 'zh' | 'ja' | 'ko' | 'fr' | 'ru' | 'de';
 
 // Get the current language from hostname or env variable
 export const getCurrentLanguage = (): Language => {
@@ -19,7 +19,7 @@ export const getCurrentLanguage = (): Language => {
     if (typeof window !== 'undefined') {
         const hostname = window.location.hostname;
         if (hostname.startsWith('zh.')) return 'zh';
-        if (hostname.startsWith('jp.')) return 'jp';
+        if (hostname.startsWith('ja.')) return 'ja';
         if (hostname.startsWith('ko.')) return 'ko';
         if (hostname.startsWith('fr.')) return 'fr';
         if (hostname.startsWith('ru.')) return 'ru';
@@ -37,7 +37,7 @@ export const getTranslations = (): Translations => {
     const translations: Record<Language, Translations> = {
         en: enTranslations,
         zh: zhTranslations,
-        jp: jpTranslations,
+        ja: jaTranslations,
         ko: koTranslations,
         fr: frTranslations,
         ru: ruTranslations,
