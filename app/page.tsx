@@ -126,6 +126,7 @@ export default function Page() {
   // Add state for window width - initialize without using window
   const [windowWidth, setWindowWidth] = useState(0);
   const [isBrowser, setIsBrowser] = useState(false);
+  const [showSidenav, setShowSidenav] = useState(false);
 
   // Update after component mounts to avoid hydration mismatch
   useEffect(() => {
@@ -143,9 +144,20 @@ export default function Page() {
     };
   }, []);
 
+  // Add delay for sidenav display
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSidenav(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  console.log(showSidenav);
+
   return (
     <div className='app'>
-      <SideNav linkItems={linkItems} setCurrentSectionIndex={setCurrentSectionIndex} width={sidenavWidth} />
+      {<SideNav linkItems={linkItems} setCurrentSectionIndex={setCurrentSectionIndex} width={sidenavWidth} />}
       <Navbar linkItems={linkItems} />
       <div
         className='app-content'

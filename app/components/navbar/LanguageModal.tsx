@@ -29,11 +29,11 @@ const LanguageDropdown: React.FC<LanguageDropdownProps> = ({ isOpen, onClose, on
           onClick={(e) => e.stopPropagation()}>
           <div className='language-options'>
             <div className={`language-option ${currentLang === 'en' ? 'active' : ''}`} onClick={() => handleSelect('en')}>
-              <Image src={en} alt='English' width={15} height={15} />
+              <Image src={en} alt='English' width={15} height={15} priority />
               <span>English</span>
             </div>
             <div className={`language-option ${currentLang === 'zh' ? 'active' : ''}`} onClick={() => handleSelect('zh')}>
-              <Image src={cn} alt='中文' width={15} height={15} />
+              <Image src={cn} alt='中文' width={15} height={15} priority />
               <span>中文</span>
             </div>
           </div>

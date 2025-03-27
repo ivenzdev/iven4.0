@@ -98,6 +98,8 @@
     z-index: 5;
     transition: 500ms ease;
     background-color: var(--theme-primary);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 
     & .canvas-particle {
         position: absolute;
@@ -106,6 +108,10 @@
         height: 600px;
         z-index: 1;
         left: calc(100% - 300px);
+    }
+
+    &.visible {
+        opacity: 1;
     }
 }
 @media screen and (max-width: 940px) {

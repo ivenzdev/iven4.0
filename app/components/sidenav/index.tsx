@@ -23,6 +23,8 @@ interface SideNavProps {
 
 const SideNav: React.FC<SideNavProps> = ({ linkItems, setCurrentSectionIndex, width }) => {
   const [tempClick, setTempClick] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     Events.scrollEvent.register('begin', () => {});
     Events.scrollEvent.register('end', () => {});
@@ -35,10 +37,15 @@ const SideNav: React.FC<SideNavProps> = ({ linkItems, setCurrentSectionIndex, wi
       window.dispatchEvent(new Event('scroll'));
     }, 300);
 
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
     return () => {
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
       clearTimeout(timeoutId);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -51,7 +58,7 @@ const SideNav: React.FC<SideNavProps> = ({ linkItems, setCurrentSectionIndex, wi
     );
   }, [tempClick]);
   return (
-    <div className='sideNav' style={{ width: `${width}px` }}>
+    <div className={`sideNav ${isVisible ? 'visible' : ''}`} style={{ width: `${width}px` }}>
       <div>
         {linkItems &&
           linkItems.map(({ name, to }, key) => (
