@@ -50,7 +50,17 @@ function Index({ linkItems }: IndexProps) {
         <div className='navBar__content'>
           <Menu SetopenMenu={SetopenMenu} openMenu={openMenu} />
           <div className='sep' />
-          <div className='flag'>
+          <div
+            className='flag'
+            onClick={() => {
+              const currentLang = getCurrentLanguage();
+              if (currentLang === 'en') {
+                window.location.href = 'https://zh.ivenzhang.com';
+              } else {
+                window.location.href = 'https://ivenzhang.com';
+              }
+            }}
+            style={{ cursor: 'pointer' }}>
             <Image src={getCurrentLanguage() === 'en' ? en : cn} alt='language icon' />
           </div>
         </div>
