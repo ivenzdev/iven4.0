@@ -259,6 +259,12 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .home-content a {
+        font-size: 1.2rem;
+    }
+}
+
 .home-content-button2-link {
     background-color: var(--theme-primary);
     color: white;

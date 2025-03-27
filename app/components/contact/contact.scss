@@ -317,6 +317,12 @@
     /* transition: 0.3s transform var(--easing) 0.15s, 0.3s font-weight var(--easing); */
 }
 
+@media screen and (max-width: 480px) {
+    .input-selections span {
+        font-size: 1.2rem;
+    }
+}
+
 .input-selections.selected span {
     /* transform: translateX(4px); */
     font-weight: 400;

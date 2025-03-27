@@ -1617,13 +1617,8 @@ body.modal-open {
 }
 
 @media screen and (max-width: 450px) {
-    .portfolio-content__grid .item {
-        // box-shadow: rgba(99, 99, 99, 0.12) 0px 2px 8px 0px;
-        padding: 7px 0px;
-        // border-radius: 8px;
-    }
     .portfolio-content__grid {
-        grid-auto-rows: 60px;
+        grid-auto-rows: 70px;
     }
 }
 .portfolio.page::after {

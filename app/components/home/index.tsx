@@ -49,11 +49,11 @@ const Home: React.FC = () => {
               <Autotype />
             </div>
 
-            <p data-aos='fade-up' data-aos-duration='650' data-aos-delay='200'>
+            <p data-aos='fade-up' data-aos-duration='650' data-aos-delay='150'>
               {t('description')}
             </p>
 
-            <div className='home-content-buttons' data-aos='fade-up' data-aos-duration='650' data-aos-delay='400'>
+            <div className='home-content-buttons' data-aos='fade-up' data-aos-duration='650' data-aos-delay='200'>
               <div className='home-content-button'>
                 <Link
                   to='contact'
