@@ -63,7 +63,7 @@ function Index({ linkItems }: IndexProps) {
     const langMap: { [key: string]: string } = {
       en: `https://${baseUrl}`,
       zh: `https://zh.${baseUrl}`,
-      ja: `https://jp.${baseUrl}`,
+      jp: `https://jp.${baseUrl}`,
       ko: `https://ko.${baseUrl}`,
       fr: `https://fr.${baseUrl}`,
       ru: `https://ru.${baseUrl}`,
@@ -93,7 +93,7 @@ function Index({ linkItems }: IndexProps) {
                     ? en
                     : getCurrentLanguage() === 'zh'
                     ? cn
-                    : getCurrentLanguage() === 'ja'
+                    : getCurrentLanguage() === 'jp'
                     ? japan
                     : getCurrentLanguage() === 'ko'
                     ? korea
