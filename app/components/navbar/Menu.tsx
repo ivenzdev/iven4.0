@@ -2,19 +2,11 @@ import React from 'react';
 
 interface MenuProps {
   openMenu: boolean;
-  SetopenMenu: (value: boolean) => void;
 }
 
-export default function Menu({ openMenu, SetopenMenu }: MenuProps) {
+export default function Menu({ openMenu }: MenuProps) {
   return (
-    <svg
-      className={`menu-svg navBar__content__menu ${openMenu ? ' open' : ''}`}
-      onClick={() => SetopenMenu(!openMenu)}
-      width='25'
-      height='20'
-      viewBox='0 0 25 20'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'>
+    <svg className={`menu-svg navBar__content__menu ${openMenu ? ' open' : ''}`} width='25' height='20' viewBox='0 0 25 20' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path d='M12.5 0H25V2H12.5V0Z' fill='white' className='p1' />
       <path d='M0 18H12.5V20H0V18Z' fill='white' className='p2' />
       <path d='M0.000244141 9.00049L25.0002 9.00049V11.0005L0.000244141 11.0005L0.000244141 9.00049Z' fill='white' className='p3' />

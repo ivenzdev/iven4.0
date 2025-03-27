@@ -9,6 +9,7 @@
     padding: 0 50px;
     justify-content: center;
     z-index: 999;
+    user-select: none;
 }
 
 .navBar__content-wrap {
@@ -69,7 +70,6 @@
     border: 1px solid rgb(209, 213, 219);
     position: relative;
     transition: all 0.2s ease;
-    background-color: white;
 
     &:hover {
         background-color: rgba(128, 128, 128, 0.05);
@@ -77,7 +77,7 @@
 
     .flag-icon {
         height: 15px;
-        width: auto;
+        width: 23px;
     }
 
     .arrow-down {
@@ -103,6 +103,11 @@
 }
 .menu-svg path {
     transition: all 0.35s ease;
+}
+
+.navBar__content__menu-container {
+    padding: 15px;
+    cursor: pointer;
 }
 /* .menu-svg.open {
     width: 25px;
@@ -329,8 +334,8 @@
     transition: background-color 0.2s ease;
 
     img {
-        width: 26px;
-        height: 16px;
+        height: 15px;
+        width: 23px;
         object-fit: cover;
     }
 

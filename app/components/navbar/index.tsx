@@ -68,8 +68,8 @@ function Index({ linkItems }: IndexProps) {
         </NextLink>
 
         <div className='navBar__content'>
-          <div className='navBar__content__menu-container'>
-            <Menu SetopenMenu={SetopenMenu} openMenu={openMenu} />
+          <div className='navBar__content__menu-container' onClick={() => SetopenMenu(!openMenu)}>
+            <Menu openMenu={openMenu} />
           </div>
           <div className='sep' />
           <div className='flag-container' style={{ cursor: 'pointer' }} ref={dropdownRef} onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}>
