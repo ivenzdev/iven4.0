@@ -47,7 +47,7 @@ export const projects: Project[] = [
     label: t('portfolio.projects.rentvest.label'),
     year: t('portfolio.projects.rentvest.year') as string[],
     about: t('portfolio.projects.rentvest.about'),
-    url: 'https://rentvest.ai/',
+    url: 'https://rentvest.io/',
     img: rentvest,
     tech: [
       { label: 'Next', svg: next },

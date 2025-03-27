@@ -153,8 +153,6 @@ export default function Page() {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log(showSidenav);
-
   return (
     <div className='app'>
       {<SideNav linkItems={linkItems} setCurrentSectionIndex={setCurrentSectionIndex} width={sidenavWidth} />}
