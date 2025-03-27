@@ -81,6 +81,7 @@
     font-weight: 400;
     text-align: center;
     color: rgb(0, 102, 191);
+    margin: 0 auto;
 }
 
 .contact-page-content h5 span {
@@ -198,12 +199,14 @@
     font-size: 1.5rem;
     font-weight: 400;
     color: var(--theme-primary);
+    border-radius: 0;
 
     line-height: 1.3;
     border-bottom: 1px solid rgba(32, 33, 36, 0.12);
 }
 .form-input.textarea {
     margin-top: 10px;
+    border-radius: 0;
 }
 .form-input.textarea .placeholder {
     align-items: baseline;
@@ -220,6 +223,7 @@
     font-size: 1.4rem;
     border-bottom: 1px solid rgba(32, 33, 36, 0.12);
     padding: 0;
+    border-radius: 0;
 }
 /* .form-input.mode-1 .placeholder {
     transform: translateY(200%);

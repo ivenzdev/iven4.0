@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.4",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
+    "framer-motion": "^12.6.2",
     "lodash": "^4.17.21",
     "next": "15.2.0",
-    "@next/third-parties": "^14.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scroll": "^1.8.7",

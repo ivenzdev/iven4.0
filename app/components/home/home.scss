@@ -238,7 +238,20 @@
 
 .home-content-button1-link {
     color: #282c34;
-    border: 1px solid var(--theme-primary);
+    border: 1px solid rgb(209, 213, 219);
+
+    &:hover {
+        border: 1px solid var(--theme-primary);
+    }
+}
+
+.home-content-button2-link {
+    background-color: var(--theme-primary);
+    color: white;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .home-content a {
@@ -253,21 +266,12 @@
     justify-content: center;
     align-items: center;
     transition: 0.3s ease;
-
-    &:hover {
-        opacity: 0.7;
-    }
 }
 
 @media screen and (max-width: 480px) {
     .home-content a {
         font-size: 1.2rem;
     }
-}
-
-.home-content-button2-link {
-    background-color: var(--theme-primary);
-    color: white;
 }
 
 .spinner {
