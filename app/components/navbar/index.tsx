@@ -43,7 +43,7 @@ function Index({ linkItems }: IndexProps) {
   return (
     <div className='navBar'>
       <div className='navBar__content-wrap'>
-        <NextLink href='/' passHref>
+        <NextLink href='/' passHref aria-label='Home'>
           <Logo />
         </NextLink>
 

@@ -10,7 +10,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: adobe-garamond-pro;
 }
 
 .flex-wrap {
@@ -29,7 +28,6 @@
   } */
 
 .content-flex {
-    font-family: "proxima-nova", sans-serif;
     height: 100%;
     width: fit-content;
     display: flex;
@@ -85,7 +83,7 @@
     width: 100%;
 }
 
-// .content-flex-div1 h4::after {
+// .content-flex-div1 h2::after {
 //     content: "";
 //     position: absolute;
 //     left: 0;
@@ -128,27 +126,25 @@ x .content-flex-div1:not(:first-child) p {
     margin-left: 10px;
 }
 
-.content-flex-div1 h4 {
+.content-flex-div1 h2 {
     font-size: 1.5rem;
     color: rgba(1, 120, 223, 0.7);
     font-weight: 400;
 
     margin-bottom: 10px;
     position: relative;
-    font-family: "proxima-nova", sans-serif;
 }
 
-.content-flex-div2 h4 {
+.content-flex-div2 h2 {
     font-size: 1.5rem;
     color: rgba(1, 120, 223, 0.7);
 
     font-weight: 400;
     margin-bottom: 10px;
     position: relative;
-    font-family: "proxima-nova", sans-serif;
 }
 
-// .content-flex-div2 h4::after {
+// .content-flex-div2 h2::after {
 //     content: "";
 //     position: absolute;
 //     right: 0;
@@ -176,7 +172,7 @@ x .content-flex-div1:not(:first-child) p {
 }
 
 // @media screen and (max-width: 1700px) {
-//     .content-flex-div1 h4 {
+//     .content-flex-div1 h2 {
 //         font-size: 1.8rem;
 //     }
 
@@ -184,7 +180,7 @@ x .content-flex-div1:not(:first-child) p {
 //         font-size: 1.4rem;
 //     }
 
-//     .content-flex-div2 h4 {
+//     .content-flex-div2 h2 {
 //         font-size: 1.6rem;
 //     }
 
@@ -208,11 +204,11 @@ x .content-flex-div1:not(:first-child) p {
 // }
 
 @media screen and (max-width: 1200px) {
-    .content-flex-div1 h4 {
+    .content-flex-div1 h2 {
         font-size: 1.6rem;
     }
 
-    .content-flex-div2 h4 {
+    .content-flex-div2 h2 {
         font-size: 1.6rem;
     }
 
@@ -244,8 +240,8 @@ x .content-flex-div1:not(:first-child) p {
         width: 130px;
         height: 180px;
     }
-    .content-flex-div2 h4,
-    .content-flex-div1 h4 {
+    .content-flex-div2 h2,
+    .content-flex-div1 h2 {
         font-size: 1.4rem;
         font-weight: 600;
     }
@@ -264,7 +260,7 @@ x .content-flex-div1:not(:first-child) p {
         height: 500px;
     }
 
-    .content-flex-div1 h4 {
+    .content-flex-div1 h2 {
         font-size: 1.2rem;
     }
 
@@ -272,7 +268,7 @@ x .content-flex-div1:not(:first-child) p {
         font-size: 1.3rem;
     }
 
-    .content-flex-div2 h4 {
+    .content-flex-div2 h2 {
         font-size: 1.2rem;
     }
 

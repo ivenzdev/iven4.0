@@ -1,9 +1,8 @@
+@import url('https://use.typekit.net/mju2djl.css');
+
 :root {
   --theme-primary: rgb(32, 35, 42);
   --theme-secondary: #dde6e7;
-  --theme-warn: #f2493d;
-  --theme-green: #53a870;
-  --easing: cubic-bezier(0.8, 0, 0.3, 1);
 }
 
 /* 1.2 typography config */
@@ -22,8 +21,6 @@ body {
 
 body {
   font-family: 'proxima-nova', sans-serif;
-  color: var(--foreground);
-  background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,24 +60,6 @@ a {
     max-width: 100% !important;
   }
 }
-
-/* @media screen and (min-width: 1700px) {
-  .app-content {
-    margin-left: 850px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .brush-img {
-    background-repeat: no-repeat;
-    background-image: url('../../public/brush.webp');
-    background-size: cover;
-    background-position: 100% 0;
-    width: 100%;
-    height: 130px;
-    position: absolute;
-    margin-top: 80px;
-  }
-}*/
 
 .page {
   position: relative;
@@ -144,13 +123,6 @@ button {
     width: calc(100% - 60px);
   }
 }
-
-/* @media screen and (max-width: 940px) {
-  .page {
-    padding: 0 150px;
-  }
- 
-} */
 
 @media screen and (max-width: 900px) {
   .page {

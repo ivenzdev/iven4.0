@@ -21,9 +21,6 @@ Skill Page
 
 .skill-bar-name {
     width: 130px;
-    // text-align: right;
-    // font-family: adobe-garamond-pro, serif;
-    font-family: "proxima-nova", sans-serif;
     font-size: 14px;
     margin-right: 20px;
     text-align: left;
@@ -67,7 +64,6 @@ Skill Page
     flex-direction: column;
 }
 .skill-page-content__head h2 {
-    font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-size: 2.7rem;
     color: var(--theme-primary);
@@ -76,7 +72,6 @@ Skill Page
 
 .skill-page-content__head p {
     font-size: 1.4rem;
-    font-family: proxima-nova, sans-serif;
     color: rgb(108, 108, 108);
     margin: 8px 0 20px;
 }
@@ -89,7 +84,6 @@ Skill Page
 .skill-page-p {
     color: var(--theme-primary);
     font-size: 1.4rem;
-    font-family: proxima-nova, sans-serif;
     margin: 10px 0px 40px;
 }
 

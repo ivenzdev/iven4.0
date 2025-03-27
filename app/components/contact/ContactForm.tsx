@@ -220,6 +220,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
               name: name,
               onChange: handleChange,
               value: state[name],
+              'aria-label': label,
             })}
           </div>
           {printInputError(name)}
@@ -252,7 +253,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             {t('contact.form.howCanIHelp')} <i style={{ color: 'red' }}>*</i>
           </span>
 
-          <textarea onChange={handleChange} value={state.content} ref={contentRef} name='content'></textarea>
+          <textarea aria-label='How Can I Help?' onChange={handleChange} value={state.content} ref={contentRef} name='content'></textarea>
         </div>
         {printInputError('content')}
       </div>

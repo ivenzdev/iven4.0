@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       <div className='page-content'>
         <div className='home-container'>
           <div className='home-card' data-aos='fade-up'>
-            <Image className='home-card-image' width={200} height={200} src={ivenz} alt={`${t('name.first')} ${t('name.last')}`} />
+            <Image priority className='home-card-image' width={200} height={200} src={ivenz} alt={`${t('name.first')} ${t('name.last')}`} />
           </div>
 
           <div className='home-content'>

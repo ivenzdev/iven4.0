@@ -45,7 +45,6 @@ function About() {
       header: t('about.stats.websites.title'),
       content: t('about.stats.websites.value'),
     },
-
     {
       header: t('about.stats.performance.title'),
       content: t('about.stats.performance.value'),
@@ -63,7 +62,7 @@ function About() {
             <div className='content-flex'>
               {c1.map(({ header, content }, key) => (
                 <div className='content-flex-div1' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
-                  <h4>{header}</h4>
+                  <h2>{header}</h2>
                   {content}
                 </div>
               ))}
@@ -76,7 +75,7 @@ function About() {
             <div className='content-flex'>
               {c2.map(({ header, content }, key) => (
                 <div className='content-flex-div2' key={key} data-aos='fade-up' data-aos-delay={(key + 1) * 100}>
-                  <h4>{header}</h4>
+                  <h2>{header}</h2>
                   <p> {content}</p>
                 </div>
               ))}
