@@ -1,29 +1,49 @@
 import enTranslations from '../locales/en/translation.json';
 import zhTranslations from '../locales/zh/translation.json';
+import jaTranslations from '../locales/ja/translation.json';
+import koTranslations from '../locales/ko/translation.json';
+import frTranslations from '../locales/fr/translation.json';
+import ruTranslations from '../locales/ru/translation.json';
+import deTranslations from '../locales/de/translation.json';
 
 // Define a type for the translations
 type Translations = {
     [key: string]: string | string[] | Translations;
 };
 
+type Language = 'en' | 'zh' | 'ja' | 'ko' | 'fr' | 'ru' | 'de';
+
 // Get the current language from hostname or env variable
-export const getCurrentLanguage = (): 'en' | 'zh' => {
+export const getCurrentLanguage = (): Language => {
     // In browser
     if (typeof window !== 'undefined') {
         const hostname = window.location.hostname;
-        if (hostname.startsWith('zh.')) {
-            return 'zh';
-        }
+        if (hostname.startsWith('zh.')) return 'zh';
+        if (hostname.startsWith('jp.')) return 'ja';
+        if (hostname.startsWith('ko.')) return 'ko';
+        if (hostname.startsWith('fr.')) return 'fr';
+        if (hostname.startsWith('ru.')) return 'ru';
+        if (hostname.startsWith('de.')) return 'de';
     }
 
     // Fallback to environment variable or default to English
-    return process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE === 'zh' ? 'zh' : 'en';
+    const defaultLang = process.env.NEXT_PUBLIC_DEFAULT_LANGUAGE as Language;
+    return defaultLang || 'en';
 };
 
 // Load translations based on current language
 export const getTranslations = (): Translations => {
     const lang = getCurrentLanguage();
-    return lang === 'zh' ? zhTranslations : enTranslations;
+    const translations: Record<Language, Translations> = {
+        en: enTranslations,
+        zh: zhTranslations,
+        ja: jaTranslations,
+        ko: koTranslations,
+        fr: frTranslations,
+        ru: ruTranslations,
+        de: deTranslations,
+    };
+    return translations[lang] || enTranslations;
 };
 
 // Helper function to get a specific translation

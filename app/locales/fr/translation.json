@@ -1,0 +1,175 @@
+{
+  "welcome": "Bienvenue",
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "name": {
+    "first": "Iven",
+    "last": "Zhang"
+  },
+  "greeting": "Bonjour, je suis Iven",
+  "description": "Je suis un développeur logiciel spécialisé dans React.js et Next.js, avec une vaste expérience dans les environnements startup. J'excelle dans la création d'applications de 0 à 1, transformant des idées en produits visuellement attrayants, centrés sur l'utilisateur et performants.",
+  "requestResume": "Demander le CV",
+  "viewWork": "Voir mes travaux",
+  "about": {
+    "education": {
+      "title": "Formation",
+      "university": "Université Lehigh",
+      "graduationYear": "Diplômé en 2023",
+      "major": "Spécialisation : Informatique"
+    },
+    "expertise": {
+      "title": "Expertise",
+      "items": [
+        "Développement Fullstack",
+        "Ingénierie Logicielle",
+        "Optimisation UI & UX",
+        "Design Graphique",
+        "SEO On & Off Page",
+        "Branding",
+        "Marketing"
+      ]
+    },
+    "development": {
+      "title": "Variations de Développement",
+      "items": [
+        "Présentation de Portfolio",
+        "Visualisation & Analyse de Données",
+        "Plateforme de Médias Sociaux",
+        "Systèmes de Gestion de Données",
+        "Solutions E-commerce"
+      ]
+    },
+    "stats": {
+      "experience": {
+        "title": "Expérience Dev",
+        "value": "4 ans"
+      },
+      "satisfaction": {
+        "title": "Projets Complétés",
+        "value": "20+"
+      },
+      "techStack": {
+        "title": "Stack Technologique",
+        "value": "15+"
+      },
+      "websites": {
+        "title": "Visiteurs du Site",
+        "value": "0.7 million+"
+      },
+      "performance": {
+        "title": "Taux de Performance",
+        "value": "95%+"
+      }
+    }
+  },
+  "contact": {
+    "collaboration": "Collaboration",
+    "buildTogether": "Construisons ensemble quelque chose d'incroyable",
+    "sendInquiry": "Envoyer une Demande",
+    "preferEmail": "Préférez l'email ?",
+    "successMessage": "Envoyé avec succès, vérifiez votre email pour confirmation",
+    "errorMessage": "Erreur serveur interne, veuillez utiliser l'email ci-dessous",
+    "subjects": ["Développement d'App", "Développement Frontend", "Design de Portfolio", "Prototypes de Site", "Demande de CV", "Autre"],
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "selectApplied": "Sélectionnez tout ce qui s'applique",
+      "howCanIHelp": "Comment puis-je vous aider ?"
+    },
+    "validation": {
+      "nameRequired": "Le nom doit contenir entre 3 et 40 caractères",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "contentLength": "Le message doit contenir entre 20 et 500 caractères",
+      "subjectRequired": "Sélectionnez au moins un champ ci-dessus"
+    },
+    "icons": {
+      "warning": "Icône d'avertissement",
+      "success": "Icône de succès",
+      "rocket": "Icône de fusée",
+      "takeoff": "Icône de décollage"
+    },
+    "copyright": "Tous droits réservés. Conçu et développé par Iven Zhang."
+  },
+  "roles": {
+    "founder": "Fondateur",
+    "fullstackDev": "Développeur Fullstack",
+    "softwareEng": "Ingénieur Logiciel",
+    "webDesigner": "Designer Web"
+  },
+  "codeWrapper": {
+    "start": "<",
+    "end": "/>"
+  },
+  "portfolio": {
+    "title": "Mes Travaux",
+    "subtitle": "Applications Logiciels & Web",
+    "projectInfo": {
+      "description": "Description",
+      "techStack": "Stack Technologique",
+      "links": "Liens",
+      "prototype": "Prototype",
+      "github": "Github",
+      "bitbucket": "Bitbucket",
+      "deliverable": "Livrable"
+    },
+    "projects": {
+      "rentvest": {
+        "label": "Rent Vest",
+        "about": "Plateforme Immobilière de Location-Achat",
+        "year": ["2025", "Startup"],
+        "description": "Co-fondé une plateforme immobilière révolutionnaire qui réalise les rêves d'accession à la propriété. En tant qu'Ingénieur Produit Technique Principal, je développe une plateforme alimentée par l'IA qui transforme le processus complexe de location-achat en un parcours fluide. Nous révolutionnons la façon dont les gens passent de la location à la propriété, une propriété à la fois."
+      },
+      "celebrate": {
+        "label": "Celebrate Life",
+        "about": "Application de Planification d'Événements & Partage de Souvenirs",
+        "year": ["2024", "Startup"],
+        "description": "En tant que développeur frontend à temps plein, j'ai dirigé le développement d'une plateforme numérique innovante qui révolutionne la façon dont les gens commémorent et partagent les moments significatifs de la vie. Construite avec des technologies de pointe, cette application combine la planification d'événements avec la narration numérique, offrant une expérience fluide pour créer, organiser et préserver des souvenirs précieux. Les fonctionnalités incluent des chronologies interactives, la planification collaborative d'événements et des suggestions de souvenirs alimentées par l'IA."
+      },
+      "vest": {
+        "label": "Vest Exchange Clone",
+        "about": "Bourse de Futures Perpétuels Décentralisée",
+        "year": ["2024"],
+        "description": "Défi de recréer la plateforme de trading crypto de Vest Exchange à partir de zéro. Construit un clone pour démontrer les compétences techniques."
+      },
+      "stealth": {
+        "label": "Stealth",
+        "about": "Plateforme de Contenu Inspirée par l'Art",
+        "year": ["2024", "Entreprise Individuelle", "Vendue"],
+        "description": "Conçu et lancé une plateforme de contenu haute performance qui a révolutionné la curation de contenu numérique. Construite avec une stack technologique moderne et optimisée pour des performances exceptionnelles, la plateforme a attiré plus de 800 000 utilisateurs mondiaux avec son interface unique inspirée par l'art et son expérience utilisateur fluide. Du concept à l'acquisition, ce projet a combiné des technologies de pointe avec une vision artistique, créant un espace où le contenu rencontre la créativité. Monétisé avec succès grâce à des partenariats stratégiques et des solutions publicitaires innovantes, établissant de nouvelles normes dans le design de plateformes de contenu. Un voyage de l'idée à la sortie qui a prouvé que l'innovation et le design centré sur l'utilisateur peuvent transformer le paysage numérique ! 🚀"
+      },
+      "enrolld": {
+        "label": "Enrolld",
+        "about": "Application d'Inscription aux Cours Universitaires",
+        "year": ["2023", "Projet de Fin d'Études"],
+        "description": "Révolutionné l'inscription aux cours universitaires avec une plateforme alimentée par l'IA qui rend l'inscription aussi facile que le shopping en ligne. Construit des fonctionnalités intelligentes qui aident les étudiants à planifier leur parcours académique tout en donnant au personnel des outils puissants pour gérer l'offre de cours. Un changement de jeu pour plus de 5 000 étudiants !"
+      },
+      "portfolio": {
+        "label": "IZ | Engineer",
+        "about": "Site Portfolio d'Iven Zhang",
+        "year": ["2023", "Portfolio Personnel"],
+        "description": "Mon terrain de jeu numérique où le code rencontre la créativité ! Ce portfolio présente mon parcours en tant que développeur à travers des designs interactifs et des animations fluides. Construit avec amour en anglais et en chinois, c'est ma façon de dire 'Hello World' aux futurs collaborateurs."
+      },
+      "ecapital": {
+        "label": "eCapital",
+        "about": "Société d'Investissement Startup",
+        "year": ["2022", "Startup", "Statique"],
+        "description": "Transformé la présence numérique d'une firme d'investissement de Manhattan avec un site web élégant et moderne. Rendu les services financiers complexes accessibles grâce à un design épuré et une navigation intuitive. Parce que les investissements intelligents méritent un design intelligent !"
+      },
+      "cag": {
+        "label": "CAG",
+        "about": "Groupe Comptabilité Cloud",
+        "year": ["2022", "Projet Personnel", "Statique"],
+        "description": "Ma première plongée dans le design web pendant mes études ! Créé un site web amusant et fictif pour un cabinet comptable pour explorer les bases du développement web. Expérimenté avec les mises en page, les animations et les flux utilisateurs - car même les projets d'entraînement méritent du style. Hé, tout le monde commence quelque part ! 🚀"
+      }
+    }
+  },
+  "skills": {
+    "title": "Stack Technologique",
+    "subtitle": "Connaissances en Logiciel"
+  }
+} 

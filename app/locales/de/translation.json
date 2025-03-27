@@ -1,0 +1,175 @@
+{
+  "welcome": "Willkommen",
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "name": {
+    "first": "Iven",
+    "last": "Zhang"
+  },
+  "greeting": "Hallo, ich bin Iven",
+  "description": "Ich bin ein Softwareentwickler, der sich auf React.js und Next.js spezialisiert hat, mit umfangreicher Erfahrung in Startup-Umgebungen. Ich bin besonders gut darin, Anwendungen von 0 auf 1 zu entwickeln und Ideen in visuell ansprechende, benutzerzentrierte und leistungsstarke Produkte zu verwandeln.",
+  "requestResume": "Lebenslauf anfordern",
+  "viewWork": "Meine Arbeiten ansehen",
+  "about": {
+    "education": {
+      "title": "Ausbildung",
+      "university": "Lehigh Universität",
+      "graduationYear": "Abschluss 2023",
+      "major": "Hauptfach: Informatik"
+    },
+    "expertise": {
+      "title": "Expertise",
+      "items": [
+        "Fullstack-Entwicklung",
+        "Softwareentwicklung",
+        "UI & UX Optimierung",
+        "Grafikdesign",
+        "On & Off Page SEO",
+        "Branding",
+        "Marketing"
+      ]
+    },
+    "development": {
+      "title": "Entwicklungsvarianten",
+      "items": [
+        "Portfolio-Präsentation",
+        "Datenvisualisierung & Analyse",
+        "Social Media Plattform",
+        "Datenmanagementsysteme",
+        "E-Commerce Lösungen"
+      ]
+    },
+    "stats": {
+      "experience": {
+        "title": "Entwicklungserfahrung",
+        "value": "4 Jahre"
+      },
+      "satisfaction": {
+        "title": "Abgeschlossene Projekte",
+        "value": "20+"
+      },
+      "techStack": {
+        "title": "Technologie-Stack",
+        "value": "15+"
+      },
+      "websites": {
+        "title": "Website-Besucher",
+        "value": "0,7 Mio.+"
+      },
+      "performance": {
+        "title": "App-Leistungsrate",
+        "value": "95%+"
+      }
+    }
+  },
+  "contact": {
+    "collaboration": "Zusammenarbeit",
+    "buildTogether": "Lass uns gemeinsam etwas Unglaubliches erschaffen",
+    "sendInquiry": "Anfrage senden",
+    "preferEmail": "Email bevorzugt?",
+    "successMessage": "Erfolgreich gesendet, überprüfen Sie Ihre E-Mail zur Bestätigung",
+    "errorMessage": "Interner Serverfehler, bitte verwenden Sie die E-Mail unten",
+    "subjects": ["App-Entwicklung", "Frontend-Entwicklung", "Portfolio-Design", "Website-Prototypen", "Lebenslauf anfordern", "Andere"],
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "selectApplied": "Wählen Sie alle zutreffenden Optionen",
+      "howCanIHelp": "Wie kann ich Ihnen helfen?"
+    },
+    "validation": {
+      "nameRequired": "Der Name muss zwischen 3 und 40 Zeichen lang sein",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "contentLength": "Die Nachricht muss zwischen 20 und 500 Zeichen lang sein",
+      "subjectRequired": "Wählen Sie mindestens eine Option oben aus"
+    },
+    "icons": {
+      "warning": "Warnungssymbol",
+      "success": "Erfolgssymbol",
+      "rocket": "Raketensymbol",
+      "takeoff": "Startsymbol"
+    },
+    "copyright": "Alle Rechte vorbehalten. Gestaltet und entwickelt von Iven Zhang."
+  },
+  "roles": {
+    "founder": "Gründer",
+    "fullstackDev": "Fullstack-Entwickler",
+    "softwareEng": "Softwareentwickler",
+    "webDesigner": "Webdesigner"
+  },
+  "codeWrapper": {
+    "start": "<",
+    "end": "/>"
+  },
+  "portfolio": {
+    "title": "Meine Arbeiten",
+    "subtitle": "Software & Webanwendungen",
+    "projectInfo": {
+      "description": "Beschreibung",
+      "techStack": "Technologie-Stack",
+      "links": "Links",
+      "prototype": "Prototyp",
+      "github": "Github",
+      "bitbucket": "Bitbucket",
+      "deliverable": "Lieferbare"
+    },
+    "projects": {
+      "rentvest": {
+        "label": "Rent Vest",
+        "about": "Immobilienplattform für Mietkauf",
+        "year": ["2025", "Startup"],
+        "description": "Mitbegründer einer revolutionären Immobilienplattform, die Wohneigentumsträume wahr macht. Als führender technischer Produktentwickler entwickle ich eine KI-gestützte Plattform, die den komplexen Mietkaufprozess in eine nahtlose Reise verwandelt. Wir revolutionieren die Art und Weise, wie Menschen von der Miete zum Eigentum wechseln, eine Immobilie nach der anderen."
+      },
+      "celebrate": {
+        "label": "Celebrate Life",
+        "about": "Eventplanungs- & Erinnerungsteilungs-App",
+        "year": ["2024", "Startup"],
+        "description": "Als Vollzeit-Frontend-Entwickler leitete ich die Entwicklung einer innovativen digitalen Plattform, die revolutioniert, wie Menschen bedeutungsvolle Lebensmomente feiern und teilen. Mit Spitzentechnologie entwickelt, kombiniert diese App Eventplanung mit digitalem Storytelling und bietet ein nahtloses Erlebnis zum Erstellen, Organisieren und Bewahren wertvoller Erinnerungen. Funktionen umfassen interaktive Zeitlinien, kollaborative Eventplanung und KI-gestützte Erinnerungsvorschläge."
+      },
+      "vest": {
+        "label": "Vest Exchange Clone",
+        "about": "Dezentralisierte Perpetual Futures Börse",
+        "year": ["2024"],
+        "description": "Herausforderung, die Krypto-Trading-Plattform von Vest Exchange von Grund auf neu zu erschaffen. Erbaute einen Klon zur Demonstration technischer Fähigkeiten."
+      },
+      "stealth": {
+        "label": "Stealth",
+        "about": "Kunstinspirierte Content-Plattform",
+        "year": ["2024", "Einzelunternehmen", "Verkauft"],
+        "description": "Entworfen und lanciert eine hochperformante Content-Plattform, die die digitale Content-Kuration revolutionierte. Mit modernem Technologie-Stack entwickelt und für außergewöhnliche Leistung optimiert, zog die Plattform über 800.000 globale Nutzer mit ihrer einzigartigen kunstinspirierten Benutzeroberfläche und nahtlosem Nutzererlebnis an. Von der Konzeption bis zur Akquisition kombinierte dieses Projekt Spitzentechnologie mit künstlerischer Vision und schuf einen Raum, wo Content auf Kreativität trifft. Erfolgreich monetarisiert durch strategische Partnerschaften und innovative Werbelösungen, setzte neue Standards im Content-Plattform-Design. Eine Reise von der Idee zum Exit, die bewies, dass Innovation und nutzerzentriertes Design die digitale Landschaft transformieren können! 🚀"
+      },
+      "enrolld": {
+        "label": "Enrolld",
+        "about": "Universitätskurs-Anmeldungs-App",
+        "year": ["2023", "Universitäts-Capstone"],
+        "description": "Revolutionierte die Universitätskursanmeldung mit einer KI-gestützten Plattform, die die Anmeldung so einfach macht wie Online-Shopping. Entwickelte intelligente Funktionen, die Studenten helfen, ihren akademischen Weg zu planen, während Mitarbeiter leistungsstarke Tools zur Verwaltung des Kursangebots erhalten. Ein Game-Changer für über 5.000 Studenten!"
+      },
+      "portfolio": {
+        "label": "IZ | Engineer",
+        "about": "Iven Zhang's Portfolio-Website",
+        "year": ["2023", "Eigenes Portfolio"],
+        "description": "Mein digitaler Spielplatz, wo Code auf Kreativität trifft! Dieses Portfolio präsentiert meinen Weg als Entwickler durch interaktive Designs und flüssige Animationen. Mit Liebe auf Englisch und Chinesisch entwickelt, ist es meine Art, 'Hello World' zu zukünftigen Mitarbeitern zu sagen."
+      },
+      "ecapital": {
+        "label": "eCapital",
+        "about": "Investment-Startup-Unternehmen",
+        "year": ["2022", "Startup", "Statisch"],
+        "description": "Transformierte die digitale Präsenz einer Manhattan-Investmentfirma mit einer eleganten und modernen Website. Machte komplexe Finanzdienstleistungen zugänglich durch sauberes Design und intuitive Navigation. Denn intelligente Investitionen verdienen intelligentes Design!"
+      },
+      "cag": {
+        "label": "CAG",
+        "about": "Cloud Accounting Group",
+        "year": ["2022", "Nebenprojekt", "Statisch"],
+        "description": "Mein erster Tauchgang ins Webdesign während des Studiums! Erstellte eine unterhaltsame fiktive Website für eine Buchhaltungsfirma, um die Grundlagen der Webentwicklung zu erkunden. Experimentierte mit Layouts, Animationen und Benutzerabläufen - denn auch Übungsprojekte verdienen Stil. Hey, jeder fängt irgendwo an! 🚀"
+      }
+    }
+  },
+  "skills": {
+    "title": "Technologie-Stack",
+    "subtitle": "Software-Wissen"
+  }
+} 

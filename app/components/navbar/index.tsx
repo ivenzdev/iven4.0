@@ -5,6 +5,12 @@ import Logo from '@/app/components/navbar/Logo';
 import { Link as ScrollLink } from 'react-scroll';
 import en from '@/public/us.svg';
 import cn from '@/public/china.svg';
+import japan from '@/public/japan.svg';
+import korea from '@/public/korea.svg';
+import france from '@/public/france.svg';
+import russia from '@/public/russia.svg';
+import germany from '@/public/germany.svg';
+
 import Menu from '@/app/components/navbar/Menu';
 import NextLink from 'next/link';
 import Image from 'next/image';
@@ -52,12 +58,18 @@ function Index({ linkItems }: IndexProps) {
     };
   }, [scroll, openMenu]);
 
-  const handleLanguageSelect = (lang: 'en' | 'zh') => {
-    if (lang === 'en') {
-      window.location.href = 'https://ivenzhang.com';
-    } else {
-      window.location.href = 'https://zh.ivenzhang.com';
-    }
+  const handleLanguageSelect = (lang: string) => {
+    const baseUrl = 'ivenzhang.com';
+    const langMap: { [key: string]: string } = {
+      en: `https://${baseUrl}`,
+      zh: `https://zh.${baseUrl}`,
+      ja: `https://jp.${baseUrl}`,
+      ko: `https://ko.${baseUrl}`,
+      fr: `https://fr.${baseUrl}`,
+      ru: `https://ru.${baseUrl}`,
+      de: `https://de.${baseUrl}`,
+    };
+    window.location.href = langMap[lang] || `https://${baseUrl}`;
   };
 
   return (
@@ -74,15 +86,31 @@ function Index({ linkItems }: IndexProps) {
           <div className='sep' />
           <div className='flag-container' style={{ cursor: 'pointer' }} ref={dropdownRef} onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Image priority src={getCurrentLanguage() === 'en' ? en : cn} alt='language icon' className='flag-icon' />
+              <Image
+                priority
+                src={
+                  getCurrentLanguage() === 'en'
+                    ? en
+                    : getCurrentLanguage() === 'zh'
+                    ? cn
+                    : getCurrentLanguage() === 'ja'
+                    ? japan
+                    : getCurrentLanguage() === 'ko'
+                    ? korea
+                    : getCurrentLanguage() === 'fr'
+                    ? france
+                    : getCurrentLanguage() === 'ru'
+                    ? russia
+                    : getCurrentLanguage() === 'de'
+                    ? germany
+                    : en
+                }
+                alt='language icon'
+                className='flag-icon'
+              />
               <Image priority src={arrowDown} alt='arrow down' className={`arrow-down `} />
             </div>
-            <LanguageDropdown
-              isOpen={isLanguageDropdownOpen}
-              onClose={() => setIsLanguageDropdownOpen(false)}
-              onSelectLanguage={handleLanguageSelect}
-              currentLang={getCurrentLanguage() as 'en' | 'zh'}
-            />
+            <LanguageDropdown isOpen={isLanguageDropdownOpen} onClose={() => setIsLanguageDropdownOpen(false)} onSelectLanguage={handleLanguageSelect} currentLang={getCurrentLanguage()} />
           </div>
         </div>
 
